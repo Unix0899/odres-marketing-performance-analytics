@@ -60,4 +60,4 @@ QA run on 24/09/2026 after `python run_pipeline.py` (full rebuild from scratch, 
 ## Remaining manual work
 
 1. Optional: *File → Save as* `.pbix` if a single file is needed (the PBIP is the versioned source).
-2. Publish the repository on GitHub and add the link on the portfolio page ("GitHub link coming soon").
+2. Done: repository published at https://github.com/Unix0899/odres-marketing-performance-analytics and linked from the portfolio page.
