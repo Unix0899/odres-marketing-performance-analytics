@@ -1,0 +1,63 @@
+relationship 0138e4d4-56c4-5e5f-9cf4-40758d67873d
+	fromColumn: FactMarketingDaily.date_key
+	toColumn: DimDate.date_key
+
+relationship b0baa360-b3bd-5fe3-86d2-dc11cc65b019
+	fromColumn: FactLeads.created_date_key
+	toColumn: DimDate.date_key
+
+relationship 537c85ab-e44f-5b8f-8f58-f55a3b5fc56b
+	fromColumn: FactOpportunities.revenue_date_key
+	toColumn: DimDate.date_key
+
+relationship a42048d0-7f75-52c4-8342-64c13f46790e
+	fromColumn: FactCustomerMonthly.month_key
+	toColumn: DimDate.date_key
+
+relationship 93476dbd-0054-5631-84d8-3680ee6e018b
+	fromColumn: FactMarketingDaily.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship d302ef0b-bf22-5a5c-ad40-11bb493d6241
+	fromColumn: FactLeads.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship de566497-75ef-5ea2-ac59-4ef9643b12fb
+	fromColumn: FactOpportunities.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship a3b1fd83-da41-5fc7-8c29-a6433767737c
+	fromColumn: DimCustomer.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship 04bb53b7-c7e0-5d72-9284-5136d99f364a
+	fromColumn: FactMarketingDaily.campaign_id
+	toColumn: DimCampaign.campaign_id
+
+relationship a5c08c9e-eee1-51f8-a1ee-5785ba4a61d0
+	fromColumn: FactLeads.campaign_id
+	toColumn: DimCampaign.campaign_id
+
+relationship 2bac1a91-35ed-5985-b441-03e4a2c31b22
+	fromColumn: FactOpportunities.campaign_id
+	toColumn: DimCampaign.campaign_id
+
+relationship e3099da1-52cf-5608-8586-3bb8b451c63b
+	fromColumn: DimCustomer.campaign_id
+	toColumn: DimCampaign.campaign_id
+
+relationship 157714ca-1c86-51b7-b68f-2eaa1a4a9a29
+	fromColumn: FactLeads.region_id
+	toColumn: DimRegion.region_id
+
+relationship 1ebfc98d-9db0-546e-898e-ed7dc45692bc
+	fromColumn: FactOpportunities.region_id
+	toColumn: DimRegion.region_id
+
+relationship 00ba7760-f8d8-5d73-b91f-f4974229feca
+	fromColumn: DimCustomer.region_id
+	toColumn: DimRegion.region_id
+
+relationship 8086659c-f603-5aae-989d-db7e35bbbcf4
+	fromColumn: FactCustomerMonthly.customer_id
+	toColumn: DimCustomer.customer_id

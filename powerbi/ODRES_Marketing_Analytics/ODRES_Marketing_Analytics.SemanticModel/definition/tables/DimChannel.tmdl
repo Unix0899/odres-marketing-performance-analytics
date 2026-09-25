@@ -1,0 +1,47 @@
+table DimChannel
+	lineageTag: 52d3047d-e542-5292-8d90-f907c3eaa075
+
+	column channel_id
+		dataType: int64
+		isKey
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: b44ef511-6a11-56fb-84bf-79cbdfec3d23
+
+	column channel_name
+		dataType: string
+		summarizeBy: none
+		sortByColumn: sort_order
+		sourceColumn: channel_name
+		lineageTag: bb71d319-e6e5-58d0-943c-0a6c622c01a3
+
+	column channel_group
+		dataType: string
+		summarizeBy: none
+		sourceColumn: channel_group
+		lineageTag: 17de132d-cdb1-58a8-b415-0f48737f19ad
+
+	column is_paid
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_paid
+		lineageTag: 8ab06209-ab30-5325-98b6-28dc54456aa5
+
+	column sort_order
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: sort_order
+		lineageTag: 041b35ff-0ffb-5c6e-939c-01ae7d73c8b8
+
+	partition DimChannel = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimChannel.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"channel_id", Int64.Type}, {"channel_name", type text}, {"channel_group", type text}, {"is_paid", Int64.Type}, {"sort_order", Int64.Type}}, "en-US")
+				in
+				    Typed

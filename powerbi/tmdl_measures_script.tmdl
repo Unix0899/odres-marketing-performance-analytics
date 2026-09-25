@@ -1,0 +1,294 @@
+createOrReplace
+
+	ref table FactMarketingDaily
+
+		measure 'Total Spend' = SUM ( FactMarketingDaily[spend] )
+			formatString: "€ #,0"
+			displayFolder: 1 Acquisition
+
+	ref table FactMarketingDaily
+
+		measure 'Impressions' = SUM ( FactMarketingDaily[impressions_count] )
+			formatString: "#,0"
+			displayFolder: 1 Acquisition
+
+	ref table FactMarketingDaily
+
+		measure 'Clicks' = SUM ( FactMarketingDaily[clicks_count] )
+			formatString: "#,0"
+			displayFolder: 1 Acquisition
+
+	ref table FactMarketingDaily
+
+		measure 'Sessions' = SUM ( FactMarketingDaily[sessions_count] )
+			formatString: "#,0"
+			displayFolder: 1 Acquisition
+
+	ref table FactMarketingDaily
+
+		measure 'CTR' = DIVIDE ( [Clicks], [Impressions] )
+			formatString: "0.00%"
+			displayFolder: 1 Acquisition
+
+	ref table FactMarketingDaily
+
+		measure 'CPC' = DIVIDE ( [Total Spend], [Clicks] )
+			formatString: "€ #,0.00"
+			displayFolder: 1 Acquisition
+
+	ref table FactLeads
+
+		measure 'Leads' = COUNTROWS ( FactLeads )
+			formatString: "#,0"
+			displayFolder: 2 Funnel
+
+	ref table FactLeads
+
+		measure 'MQLs' = CALCULATE ( [Leads], FactLeads[is_mql] = 1 )
+			formatString: "#,0"
+			displayFolder: 2 Funnel
+
+	ref table FactLeads
+
+		measure 'SQLs' = CALCULATE ( [Leads], FactLeads[is_sql] = 1 )
+			formatString: "#,0"
+			displayFolder: 2 Funnel
+
+	ref table FactLeads
+
+		measure 'Avg Lead Score' = AVERAGE ( FactLeads[lead_score] )
+			formatString: "0.0"
+			displayFolder: 2 Funnel
+
+	ref table FactOpportunities
+
+		measure 'Opportunities' = COUNTROWS ( FactOpportunities )
+			formatString: "#,0"
+			displayFolder: 2 Funnel
+
+	ref table FactOpportunities
+
+		measure 'Customers' = CALCULATE ( COUNTROWS ( FactOpportunities ), FactOpportunities[is_won] = 1 )
+			formatString: "#,0"
+			displayFolder: 2 Funnel
+
+	ref table FactLeads
+
+		measure 'Session to Lead %' = DIVIDE ( [Leads], [Sessions] )
+			formatString: "0.0%"
+			displayFolder: 3 Conversion
+
+	ref table FactLeads
+
+		measure 'Lead to MQL %' = DIVIDE ( [MQLs], [Leads] )
+			formatString: "0.0%"
+			displayFolder: 3 Conversion
+
+	ref table FactLeads
+
+		measure 'MQL to SQL %' = DIVIDE ( [SQLs], [MQLs] )
+			formatString: "0.0%"
+			displayFolder: 3 Conversion
+
+	ref table FactLeads
+
+		measure 'SQL to Customer %' = DIVIDE ( [Customers], [SQLs] )
+			formatString: "0.0%"
+			displayFolder: 3 Conversion
+
+	ref table FactLeads
+
+		measure 'Lead to Customer %' = DIVIDE ( [Customers], [Leads] )
+			formatString: "0.00%"
+			displayFolder: 3 Conversion
+
+	ref table FactMarketingDaily
+
+		measure 'CPL' = IF ( [Total Spend] > 0, DIVIDE ( [Total Spend], [Leads] ) )
+			formatString: "€ #,0.00"
+			displayFolder: 4 Efficiency
+
+	ref table FactMarketingDaily
+
+		measure 'CAC' = IF ( [Total Spend] > 0, DIVIDE ( [Total Spend], [Customers] ) )
+			formatString: "€ #,0"
+			displayFolder: 4 Efficiency
+
+	ref table FactMarketingDaily
+
+		measure 'Revenue / Spend' = DIVIDE ( [Won Revenue], [Total Spend] )
+			formatString: "0.0x"
+			displayFolder: 4 Efficiency
+
+	ref table FactOpportunities
+
+		measure 'Won Revenue' = CALCULATE ( SUM ( FactOpportunities[won_value] ), FactOpportunities[is_won] = 1 )
+			formatString: "€ #,0"
+			displayFolder: 5 Revenue
+
+	ref table FactOpportunities
+
+		measure 'Average Deal Value' = DIVIDE ( [Won Revenue], [Customers] )
+			formatString: "€ #,0"
+			displayFolder: 5 Revenue
+
+	ref table FactOpportunities
+
+		measure 'Average Sales Cycle' = CALCULATE ( AVERAGE ( FactOpportunities[sales_cycle_days] ), FactOpportunities[is_won] = 1 )
+			formatString: "0.0"
+			displayFolder: 5 Revenue
+
+	ref table FactOpportunities
+
+		measure 'Win Rate' = DIVIDE ( [Customers], CALCULATE ( COUNTROWS ( FactOpportunities ), FactOpportunities[status] IN { "Won", "Lost" } ) )
+			formatString: "0.0%"
+			displayFolder: 5 Revenue
+
+	ref table FactOpportunities
+
+		measure 'Open Pipeline' = CALCULATE ( SUM ( FactOpportunities[expected_value] ), FactOpportunities[status] = "Open" )
+			formatString: "€ #,0"
+			displayFolder: 5 Revenue
+
+	ref table FactOpportunities
+
+		measure 'Lost Value' = CALCULATE ( SUM ( FactOpportunities[expected_value] ), FactOpportunities[status] = "Lost" )
+			formatString: "€ #,0"
+			displayFolder: 5 Revenue
+
+	ref table FactCustomerMonthly
+
+		measure 'MRR' = CALCULATE ( SUM ( FactCustomerMonthly[mrr_amount] ), FactCustomerMonthly[is_active] = 1 )
+			formatString: "€ #,0"
+			displayFolder: 6 Customers
+
+	ref table FactCustomerMonthly
+
+		measure 'MRR (end of period)' =
+				VAR LastMonth = MAX ( FactCustomerMonthly[month_key] )
+				RETURN
+				    CALCULATE ( [MRR], FactCustomerMonthly[month_key] = LastMonth )
+			formatString: "€ #,0"
+			displayFolder: 6 Customers
+
+	ref table FactCustomerMonthly
+
+		measure 'Active Customers' = CALCULATE ( DISTINCTCOUNT ( FactCustomerMonthly[customer_id] ), FactCustomerMonthly[is_active] = 1 )
+			formatString: "#,0"
+			displayFolder: 6 Customers
+
+	ref table FactCustomerMonthly
+
+		measure 'Churned Customers' = SUM ( FactCustomerMonthly[is_churned] )
+			formatString: "#,0"
+			displayFolder: 6 Customers
+
+	ref table FactCustomerMonthly
+
+		measure 'Churn Rate' = DIVIDE ( [Churned Customers], [Active Customers] + [Churned Customers] )
+			formatString: "0.0%"
+			displayFolder: 6 Customers
+
+	ref table FactLeads
+
+		measure 'MoM Leads %' =
+				VAR CurrentLeads = [Leads]
+				VAR PreviousLeads = CALCULATE ( [Leads], DATEADD ( DimDate[date], -1, MONTH ) )
+				RETURN
+				    DIVIDE ( CurrentLeads - PreviousLeads, PreviousLeads )
+			formatString: "+0.0%;-0.0%;0.0%"
+			displayFolder: 7 Trend
+
+	ref table FactOpportunities
+
+		measure 'MoM Revenue %' =
+				VAR CurrentRevenue = [Won Revenue]
+				VAR PreviousRevenue = CALCULATE ( [Won Revenue], DATEADD ( DimDate[date], -1, MONTH ) )
+				RETURN
+				    DIVIDE ( CurrentRevenue - PreviousRevenue, PreviousRevenue )
+			formatString: "+0.0%;-0.0%;0.0%"
+			displayFolder: 7 Trend
+
+	ref table DataQualityChecks
+
+		measure 'Issues Found (raw)' = SUM ( DataQualityChecks[raw] )
+			formatString: "#,0"
+			displayFolder: 8 Data quality
+
+	ref table DataQualityChecks
+
+		measure 'Blocking Errors Left' = CALCULATE ( SUM ( DataQualityChecks[clean] ), DataQualityChecks[severity] = "BLOCKING" )
+			formatString: "#,0"
+			displayFolder: 8 Data quality
+
+	ref table DataQualityChecks
+
+		measure 'Documented Warnings' = CALCULATE ( SUM ( DataQualityChecks[clean] ), DataQualityChecks[severity] = "WARNING" )
+			formatString: "#,0"
+			displayFolder: 8 Data quality
+
+	ref table DataQualityRowCounts
+
+		measure 'Rows Loaded' = SUM ( DataQualityRowCounts[clean_rows] )
+			formatString: "#,0"
+			displayFolder: 8 Data quality
+
+	ref table DataQualityRowCounts
+
+		measure 'Rows Removed' = SUM ( DataQualityRowCounts[removed] )
+			formatString: "#,0"
+			displayFolder: 8 Data quality
+
+	ref table FactMarketingDaily
+
+		measure 'Paid Spend' = CALCULATE ( [Total Spend], DimChannel[is_paid] = 1 )
+			formatString: "€ #,0"
+			displayFolder: 9 Report helpers
+
+	ref table FactMarketingDaily
+
+		measure 'Paid CAC' = CALCULATE ( [CAC], DimChannel[is_paid] = 1 )
+			formatString: "€ #,0"
+			displayFolder: 9 Report helpers
+
+	ref table FactOpportunities
+
+		measure 'Non-paid Revenue Share' = DIVIDE ( CALCULATE ( [Won Revenue], DimChannel[is_paid] = 0 ), [Won Revenue] )
+			formatString: "0%"
+			displayFolder: 9 Report helpers
+
+	ref table FactLeads
+
+		measure 'Share of Leads' = DIVIDE ( [Leads], CALCULATE ( [Leads], ALL ( DimChannel ) ) )
+			formatString: "0.0%"
+			displayFolder: 9 Report helpers
+
+	ref table FactOpportunities
+
+		measure 'Share of Customers' = DIVIDE ( [Customers], CALCULATE ( [Customers], ALL ( DimChannel ) ) )
+			formatString: "0.0%"
+			displayFolder: 9 Report helpers
+
+	ref table FactCustomerMonthly
+
+		measure 'ARR Run-rate' = [MRR (end of period)] * 12
+			formatString: "€ #,0"
+			displayFolder: 9 Report helpers
+
+	ref table FactMarketingDaily
+
+		measure 'Campaigns to Scale' = CALCULATE ( COUNTROWS ( DimCampaign ), DimCampaign[Recommendation] = "SCALE" ) + 0
+			formatString: "0"
+			displayFolder: 9 Report helpers
+
+	ref table FactMarketingDaily
+
+		measure 'Campaigns to Reduce' = CALCULATE ( COUNTROWS ( DimCampaign ), DimCampaign[Recommendation] = "REDUCE" ) + 0
+			formatString: "0"
+			displayFolder: 9 Report helpers
+
+	ref table DataQualityChecks
+
+		measure 'Issues After Cleaning' = SUM ( DataQualityChecks[clean] )
+			formatString: "#,0"
+			displayFolder: 8 Data quality

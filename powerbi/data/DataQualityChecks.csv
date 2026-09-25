@@ -1,0 +1,23 @@
+check_id,table,description,severity,raw,clean
+DQ01,marketing_daily,Exact duplicate rows,BLOCKING,12,0
+DQ02,marketing_daily,Channel label not in reference (exact match),BLOCKING,80,0
+DQ03,marketing_daily,Invalid or empty date,BLOCKING,3,0
+DQ04,marketing_daily,Negative spend (spend >= 0),BLOCKING,2,0
+DQ05,marketing_daily,Spend outlier (> 10x campaign median),BLOCKING,1,0
+DQ06,marketing_daily,Clicks greater than impressions,BLOCKING,2,0
+DQ07,leads,Missing lead_id (critical ID),BLOCKING,3,0
+DQ08,leads,Duplicate lead_id,BLOCKING,45,0
+DQ09,leads,Unknown campaign,WARNING,30,29
+DQ10,leads,Region label not in reference,BLOCKING,70,0
+DQ11,leads,Company size not in 1-9 / 10-49 / 50+,BLOCKING,40,0
+DQ12,leads,Lead score outside 0-100,BLOCKING,8,0
+DQ13,leads,Lead score missing,WARNING,60,67
+DQ14,leads,SQL = 1 while MQL = 0,BLOCKING,25,0
+DQ15,opportunities,Duplicate opportunity rows,BLOCKING,8,0
+DQ16,opportunities,Orphan opportunity (lead unknown),BLOCKING,5,0
+DQ17,opportunities,Stage not in Won / Lost / Open,BLOCKING,36,0
+DQ18,opportunities,Won opportunity without value (> 0),BLOCKING,6,0
+DQ19,opportunities,Negative won value,BLOCKING,0,0
+DQ20,opportunities,Close date before creation date,BLOCKING,4,0
+DQ21,customers,Duplicate customer_id,BLOCKING,3,0
+DQ22,customers,Customer without a Won opportunity,BLOCKING,0,0

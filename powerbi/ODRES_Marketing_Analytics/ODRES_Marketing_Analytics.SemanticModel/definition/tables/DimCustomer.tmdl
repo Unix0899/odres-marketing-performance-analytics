@@ -1,0 +1,80 @@
+table DimCustomer
+	lineageTag: cd0ebb20-eef5-5b64-885f-5bab10481cfb
+
+	column customer_id
+		dataType: int64
+		isKey
+		isHidden
+		summarizeBy: none
+		sourceColumn: customer_id
+		lineageTag: d8942a41-3919-5422-83ee-35924ceb7ecb
+
+	column opportunity_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: opportunity_id
+		lineageTag: db8449c4-72bc-5fb4-a019-58fd4b42dcc7
+
+	column acquisition_date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: acquisition_date_key
+		lineageTag: 4e97f258-5eaf-5b16-a1f9-7f3e54df430c
+
+	column channel_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: 47a1a3e0-dd2d-51af-a912-08aa20dcb27f
+
+	column campaign_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: campaign_id
+		lineageTag: 427ce981-26c4-5139-ac8c-3ca7f3cf0147
+
+	column region_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_id
+		lineageTag: 1138bf74-54d6-532d-88d6-28051d9e67b1
+
+	column company_size
+		dataType: string
+		summarizeBy: none
+		sourceColumn: company_size
+		lineageTag: c0052db3-c926-50ee-962e-f012703ffec3
+
+	column business_type
+		dataType: string
+		summarizeBy: none
+		sourceColumn: business_type
+		lineageTag: bbe03a42-9d3f-54bd-8884-3b656265c1ff
+
+	column plan
+		dataType: string
+		summarizeBy: none
+		sourceColumn: plan
+		lineageTag: fa554453-8d21-5e82-8040-c763d582c0ed
+
+	column starting_mrr
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: starting_mrr
+		lineageTag: 92a15517-8b1f-59b0-9ca1-40b3dbab9eae
+
+	partition DimCustomer = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimCustomer.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"customer_id", Int64.Type}, {"opportunity_id", Int64.Type}, {"acquisition_date_key", Int64.Type}, {"channel_id", Int64.Type}, {"campaign_id", Int64.Type}, {"region_id", Int64.Type}, {"company_size", type text}, {"business_type", type text}, {"plan", type text}, {"starting_mrr", type number}}, "en-US")
+				in
+				    Typed

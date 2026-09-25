@@ -1,0 +1,43 @@
+channel_name,stage_order,stage,volume,previous_volume,conversion_from_previous,drop_off
+Direct,1,Sessions,40061,,,
+Direct,2,Leads,823,40061.0,0.0205,0.9795
+Direct,3,MQL,496,823.0,0.6027,0.3973
+Direct,4,SQL,298,496.0,0.6008,0.3992
+Direct,5,Opportunity,243,298.0,0.8154,0.1846
+Direct,6,Customer,65,243.0,0.2675,0.7325
+Email,1,Sessions,14710,,,
+Email,2,Leads,805,14710.0,0.0547,0.9453
+Email,3,MQL,501,805.0,0.6224,0.3776
+Email,4,SQL,302,501.0,0.6028,0.3972
+Email,5,Opportunity,255,302.0,0.8444,0.1556
+Email,6,Customer,72,255.0,0.2824,0.7176
+Google Ads,1,Sessions,15491,,,
+Google Ads,2,Leads,535,15491.0,0.0345,0.9655
+Google Ads,3,MQL,272,535.0,0.5084,0.4916
+Google Ads,4,SQL,119,272.0,0.4375,0.5625
+Google Ads,5,Opportunity,96,119.0,0.8067,0.1933
+Google Ads,6,Customer,26,96.0,0.2708,0.7292
+LinkedIn Ads,1,Sessions,3442,,,
+LinkedIn Ads,2,Leads,140,3442.0,0.0407,0.9593
+LinkedIn Ads,3,MQL,98,140.0,0.7,0.3
+LinkedIn Ads,4,SQL,80,98.0,0.8163,0.1837
+LinkedIn Ads,5,Opportunity,64,80.0,0.8,0.2
+LinkedIn Ads,6,Customer,20,64.0,0.3125,0.6875
+Meta Ads,1,Sessions,33329,,,
+Meta Ads,2,Leads,1533,33329.0,0.046,0.954
+Meta Ads,3,MQL,318,1533.0,0.2074,0.7926
+Meta Ads,4,SQL,68,318.0,0.2138,0.7862
+Meta Ads,5,Opportunity,53,68.0,0.7794,0.2206
+Meta Ads,6,Customer,7,53.0,0.1321,0.8679
+Organic Search,1,Sessions,64319,,,
+Organic Search,2,Leads,1075,64319.0,0.0167,0.9833
+Organic Search,3,MQL,555,1075.0,0.5163,0.4837
+Organic Search,4,SQL,281,555.0,0.5063,0.4937
+Organic Search,5,Opportunity,226,281.0,0.8043,0.1957
+Organic Search,6,Customer,53,226.0,0.2345,0.7655
+Referral,1,Sessions,8204,,,
+Referral,2,Leads,566,8204.0,0.069,0.931
+Referral,3,MQL,437,566.0,0.7721,0.2279
+Referral,4,SQL,345,437.0,0.7895,0.2105
+Referral,5,Opportunity,285,345.0,0.8261,0.1739
+Referral,6,Customer,107,285.0,0.3754,0.6246

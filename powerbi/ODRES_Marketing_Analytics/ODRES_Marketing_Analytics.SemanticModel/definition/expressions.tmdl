@@ -1,0 +1,3 @@
+/// Folder that contains the CSV exports (powerbi/data). Change it after cloning the repository.
+expression DataFolder = "C:\Users\USER\Desktop\PORTFOLIO\ODRES_Marketing_Performance_Analytics\powerbi\data\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 5d190a6a-5050-552b-aeb8-8ebc9ce56b44

@@ -1,0 +1,23 @@
+rule,table,rows_affected,action
+M1,marketing_daily,12,exact duplicate rows removed
+M2,marketing_daily,80,channel labels trimmed and matched to reference (case-insensitive)
+M3,marketing_daily,3,invalid or empty dates dropped (row cannot be attributed to a day)
+M4,marketing_daily,2,negative spend treated as sign error (abs value)
+M5,marketing_daily,1,spend > 10x campaign median replaced by campaign median
+M6,marketing_daily,2,clicks > impressions: clicks reset to analytics sessions
+M7,marketing_daily,0,"remaining duplicates on (date, campaign) removed"
+L1,leads,3,rows without lead_id dropped (cannot be linked)
+L2,leads,45,duplicate lead_id removed (first occurrence kept)
+L3,leads,29,"unknown campaign -> campaign_id NULL, lead kept under its channel"
+L4,leads,70,region labels (FR/NL/casing) mapped to reference region
+L5,leads,40,company_size format normalised (e.g. '10 - 49' -> '10-49')
+L6,leads,8,lead_score outside 0-100 set to NULL (unknown)
+L6b,leads,67,"lead_score NULL kept as unknown (excluded from averages, not imputed)"
+L7,leads,25,SQL without MQL: is_mql set to 1 (an SQL has passed the MQL stage)
+O1,opportunities,8,exact duplicate rows removed
+O2,opportunities,5,orphan opportunities (lead not in CRM) removed
+O3,opportunities,35,stage casing standardised to Won / Lost / Open
+O4,opportunities,6,"Won without value: won_value = expected_value, flagged"
+O5,opportunities,4,close date before creation: close date set NULL (cycle unknown)
+C1,customers,3,duplicate customer_id removed
+C2,customers,0,customers without a Won opportunity removed

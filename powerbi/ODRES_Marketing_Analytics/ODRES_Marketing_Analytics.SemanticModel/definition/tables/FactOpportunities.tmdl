@@ -1,0 +1,189 @@
+table FactOpportunities
+	lineageTag: cc8e2d4a-3e02-54a6-9c65-ced36efdc351
+
+	measure 'Opportunities' = COUNTROWS ( FactOpportunities )
+		formatString: "#,0"
+		displayFolder: 2 Funnel
+		lineageTag: fcff47f8-ce9b-5113-a823-6f23bd560e14
+
+	/// Won opportunities = new customers.
+	measure 'Customers' = CALCULATE ( COUNTROWS ( FactOpportunities ), FactOpportunities[is_won] = 1 )
+		formatString: "#,0"
+		displayFolder: 2 Funnel
+		lineageTag: 1851c2a6-b931-5495-a4a8-e519d13abfbc
+
+	/// First-year contract value of won deals, by revenue_date_key.
+	measure 'Won Revenue' = CALCULATE ( SUM ( FactOpportunities[won_value] ), FactOpportunities[is_won] = 1 )
+		formatString: "€ #,0"
+		displayFolder: 5 Revenue
+		lineageTag: 87ad24d0-000e-54df-87e4-692b303568eb
+
+	measure 'Average Deal Value' = DIVIDE ( [Won Revenue], [Customers] )
+		formatString: "€ #,0"
+		displayFolder: 5 Revenue
+		lineageTag: 04ce271a-dd21-55ae-ad74-535d199d6b85
+
+	/// Days from opportunity creation to close (won deals, known dates only).
+	measure 'Average Sales Cycle' = CALCULATE ( AVERAGE ( FactOpportunities[sales_cycle_days] ), FactOpportunities[is_won] = 1 )
+		formatString: "0.0"
+		displayFolder: 5 Revenue
+		lineageTag: f051bd73-0291-582c-ade5-84ab4e43f7ca
+
+	/// Won / closed opportunities.
+	measure 'Win Rate' = DIVIDE ( [Customers], CALCULATE ( COUNTROWS ( FactOpportunities ), FactOpportunities[status] IN { "Won", "Lost" } ) )
+		formatString: "0.0%"
+		displayFolder: 5 Revenue
+		lineageTag: abf7bbaa-4967-5d73-a889-e64b3badf0be
+
+	measure 'Open Pipeline' = CALCULATE ( SUM ( FactOpportunities[expected_value] ), FactOpportunities[status] = "Open" )
+		formatString: "€ #,0"
+		displayFolder: 5 Revenue
+		lineageTag: d7c9aab8-d342-59f1-a26a-b12433af8e56
+
+	measure 'Lost Value' = CALCULATE ( SUM ( FactOpportunities[expected_value] ), FactOpportunities[status] = "Lost" )
+		formatString: "€ #,0"
+		displayFolder: 5 Revenue
+		lineageTag: c743bf37-455b-5b97-8875-28f25f87f88e
+
+	measure 'MoM Revenue %' =
+			VAR CurrentRevenue = [Won Revenue]
+			VAR PreviousRevenue = CALCULATE ( [Won Revenue], DATEADD ( DimDate[date], -1, MONTH ) )
+			RETURN
+			    DIVIDE ( CurrentRevenue - PreviousRevenue, PreviousRevenue )
+		formatString: "+0.0%;-0.0%;0.0%"
+		displayFolder: 7 Trend
+		lineageTag: e9a37c37-7997-51c4-b2df-15c6acdcb23e
+
+	/// Share of won revenue coming from channels without paid media.
+	measure 'Non-paid Revenue Share' = DIVIDE ( CALCULATE ( [Won Revenue], DimChannel[is_paid] = 0 ), [Won Revenue] )
+		formatString: "0%"
+		displayFolder: 9 Report helpers
+		lineageTag: bd813b81-1dc6-55c7-b656-ca9e1611d33c
+
+	/// Share of all customers (by channel).
+	measure 'Share of Customers' = DIVIDE ( [Customers], CALCULATE ( [Customers], ALL ( DimChannel ) ) )
+		formatString: "0.0%"
+		displayFolder: 9 Report helpers
+		lineageTag: da2ed40d-9e70-5a88-ac59-a97c708c7e50
+
+	column opportunity_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: opportunity_id
+		lineageTag: 7d436440-ec36-538e-9ba9-5ec5947492cd
+
+	column lead_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: lead_id
+		lineageTag: d75ab7b1-5c32-5c60-9fe7-b6976aee285e
+
+	column created_date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: created_date_key
+		lineageTag: 2f60b4e2-9dc6-5dd3-9850-b6ba78abf3eb
+
+	column close_date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: close_date_key
+		lineageTag: f7e71d68-8ba7-5813-ab35-9ac7529dbfb2
+
+	column revenue_date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: revenue_date_key
+		lineageTag: 7be2457c-b3ad-5daf-83c9-5f0c8b3b1a0f
+
+	column channel_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: f4bba7df-4c74-5401-95d5-726afcefe183
+
+	column campaign_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: campaign_id
+		lineageTag: 4044e763-fcc6-5298-959f-e86ae9c9fe71
+
+	column region_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_id
+		lineageTag: f1b400a7-5b38-513a-b278-649dec6bb5a0
+
+	column company_size
+		dataType: string
+		summarizeBy: none
+		sourceColumn: company_size
+		lineageTag: 9760283d-c3b9-5c31-a5a3-bc36357eb5b0
+
+	column plan
+		dataType: string
+		summarizeBy: none
+		sourceColumn: plan
+		lineageTag: 07f7f04b-49f6-5cea-99e5-69402be43cdf
+
+	column sites
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: sites
+		lineageTag: 5e666a54-db2d-5764-b3de-cba585548a97
+
+	column status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: status
+		lineageTag: b3d3ea6e-cc3b-5f55-bbc0-01478ca1e9ab
+
+	column is_won
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_won
+		lineageTag: e51a3892-db1f-5a07-8dd4-b2f649ae672f
+
+	column expected_value
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: expected_value
+		lineageTag: a39d234f-7cae-5162-8c1b-c4a05018bfc5
+
+	column won_value
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: won_value
+		lineageTag: 15b30f42-9c60-5a0b-a6a0-e5856e167912
+
+	column sales_cycle_days
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: sales_cycle_days
+		lineageTag: efd5921b-9d6f-504a-9e74-ff4aa276dd5a
+
+	column value_imputed
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: value_imputed
+		lineageTag: 85bb4687-ad87-5b82-9b8a-f0ba091a4679
+
+	partition FactOpportunities = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactOpportunities.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"opportunity_id", Int64.Type}, {"lead_id", Int64.Type}, {"created_date_key", Int64.Type}, {"close_date_key", Int64.Type}, {"revenue_date_key", Int64.Type}, {"channel_id", Int64.Type}, {"campaign_id", Int64.Type}, {"region_id", Int64.Type}, {"company_size", type text}, {"plan", type text}, {"sites", Int64.Type}, {"status", type text}, {"is_won", Int64.Type}, {"expected_value", type number}, {"won_value", type number}, {"sales_cycle_days", Int64.Type}, {"value_imputed", Int64.Type}}, "en-US")
+				in
+				    Typed

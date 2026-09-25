@@ -1,0 +1,351 @@
+customer_id,channel_name,region_name,region_group,company_size,business_type,plan,acquisition_month,starting_mrr,months_billed,revenue_to_date,has_churned,last_month
+1,Organic Search,Brussels,Brussels-Capital,1-9,Bar,Starter,2025-11,50.43,5,252.71,1,2026-03
+2,Referral,Flemish Brabant,Flanders,10-49,Snack,Pro,2025-11,110.33,7,772.25,1,2026-05
+3,Organic Search,Hainaut,Wallonia,10-49,Snack,Pro,2025-12,110.47,7,774.76,0,2026-06
+4,Google Ads,Flemish Brabant,Flanders,10-49,Snack,Pro,2025-11,116.09,8,931.11,0,2026-06
+5,Organic Search,Brussels,Brussels-Capital,1-9,Café,Starter,2025-11,51.75,8,414.39,0,2026-06
+6,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2025-11,49.79,8,397.66,0,2026-06
+7,Organic Search,Hainaut,Wallonia,1-9,Café,Pro,2025-11,113.29,8,905.01,0,2026-06
+8,Organic Search,Walloon Brabant,Wallonia,10-49,Bar,Pro,2026-01,124.82,6,748.28,0,2026-06
+9,Direct,East Flanders,Flanders,10-49,Restaurant,Starter,2025-12,43.63,7,305.11,0,2026-06
+10,Meta Ads,Liège,Wallonia,10-49,Bar,Pro,2025-12,114.54,7,801.4,0,2026-06
+11,Referral,Antwerp,Flanders,10-49,Café,Pro,2025-12,100.25,7,701.56,0,2026-06
+12,Referral,Hainaut,Wallonia,10-49,Restaurant,Pro,2025-12,126.58,7,885.11,0,2026-06
+13,Referral,Flemish Brabant,Flanders,10-49,Bar,Group,2025-12,1565.22,7,10933.78,0,2026-06
+14,Organic Search,East Flanders,Flanders,1-9,Bar,Starter,2025-12,46.41,7,325.05,0,2026-06
+15,Direct,Brussels,Brussels-Capital,10-49,Café,Pro,2025-12,106.54,7,747.24,0,2026-06
+16,Referral,Antwerp,Flanders,1-9,Hotel,Starter,2025-12,46.51,7,325.25,0,2026-06
+17,LinkedIn Ads,Brussels,Brussels-Capital,50+,Restaurant,Pro,2026-02,111.81,5,559.28,0,2026-06
+18,Email,Liège,Wallonia,10-49,Snack,Pro,2025-12,116.61,7,815.18,0,2026-06
+19,Organic Search,Antwerp,Flanders,10-49,Snack,Starter,2025-12,43.06,7,301.39,0,2026-06
+20,Email,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2025-12,47.48,7,332.38,0,2026-06
+21,LinkedIn Ads,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2025-12,96.74,7,676.46,0,2026-06
+22,Direct,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2025-12,46.52,7,325.82,0,2026-06
+23,LinkedIn Ads,Antwerp,Flanders,10-49,Snack,Pro,2025-12,122.58,7,860.28,0,2026-06
+24,Direct,East Flanders,Flanders,1-9,Restaurant,Pro,2025-11,120.18,8,961.07,0,2026-06
+25,Direct,Walloon Brabant,Wallonia,10-49,Bar,Starter,2025-12,47.88,7,335.96,0,2026-06
+26,Organic Search,Flemish Brabant,Flanders,10-49,Restaurant,Group,2025-12,988.29,2,1973.98,1,2026-01
+27,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2025-12,44.67,7,313.44,0,2026-06
+28,Direct,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-01,40.02,6,239.87,0,2026-06
+29,Google Ads,Liège,Wallonia,10-49,Restaurant,Pro,2025-12,95.81,7,670.92,0,2026-06
+30,Direct,Namur,Wallonia,10-49,Snack,Starter,2025-12,41.88,7,293.83,0,2026-06
+31,Referral,Liège,Wallonia,1-9,Restaurant,Pro,2025-12,108.08,7,756.3,0,2026-06
+32,Email,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2025-12,46.17,7,323.21,0,2026-06
+33,Organic Search,Antwerp,Flanders,50+,Snack,Group,2025-12,1411.72,7,9861.74,1,2026-06
+34,Referral,Walloon Brabant,Wallonia,1-9,Restaurant,Starter,2025-12,42.16,7,296.33,1,2026-06
+35,Referral,Flemish Brabant,Flanders,10-49,Hotel,Pro,2026-01,103.77,6,623.06,0,2026-06
+36,Email,East Flanders,Flanders,10-49,Bar,Pro,2025-12,100.73,7,705.56,0,2026-06
+37,Referral,Flemish Brabant,Flanders,10-49,Bar,Starter,2026-01,45.86,6,275.29,0,2026-06
+38,Referral,Liège,Wallonia,1-9,Restaurant,Starter,2026-01,45.86,6,274.59,0,2026-06
+39,Direct,Namur,Wallonia,10-49,Bar,Group,2026-01,840.11,6,5038.15,0,2026-06
+40,Referral,Antwerp,Flanders,1-9,Bar,Starter,2026-01,45.24,6,271.7,0,2026-06
+41,Referral,Walloon Brabant,Wallonia,1-9,Restaurant,Starter,2026-01,37.79,6,226.63,1,2026-06
+42,Referral,Antwerp,Flanders,10-49,Restaurant,Pro,2026-01,101.58,6,610.58,0,2026-06
+43,Google Ads,Hainaut,Wallonia,1-9,Bar,Starter,2025-12,40.49,7,283.46,0,2026-06
+44,Email,Flemish Brabant,Flanders,1-9,Bar,Starter,2026-01,52.96,6,318.62,0,2026-06
+45,Direct,Antwerp,Flanders,10-49,Hotel,Pro,2026-01,104.56,6,626.96,0,2026-06
+46,Referral,Walloon Brabant,Wallonia,1-9,Restaurant,Pro,2026-01,109.13,6,653.84,0,2026-06
+47,Referral,East Flanders,Flanders,1-9,Restaurant,Starter,2025-12,40.89,7,286.17,0,2026-06
+48,Referral,Namur,Wallonia,1-9,Restaurant,Starter,2025-12,51.02,7,357.58,0,2026-06
+49,Referral,Hainaut,Wallonia,1-9,Bar,Starter,2025-12,53.67,7,375.02,0,2026-06
+50,Referral,Liège,Wallonia,50+,Bar,Group,2026-03,509.65,4,2043.97,0,2026-06
+51,Referral,Antwerp,Flanders,1-9,Restaurant,Starter,2026-01,40.68,6,244.74,0,2026-06
+52,Organic Search,Walloon Brabant,Wallonia,10-49,Snack,Pro,2026-01,110.35,6,663.28,0,2026-06
+53,Email,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-01,44.73,6,268.47,0,2026-06
+54,Organic Search,Hainaut,Wallonia,10-49,Bar,Starter,2026-01,38.53,6,231.96,0,2026-06
+55,Direct,Namur,Wallonia,10-49,Restaurant,Pro,2026-01,108.95,6,653.45,0,2026-06
+56,Referral,Antwerp,Flanders,1-9,Bar,Starter,2026-01,43.48,6,260.25,0,2026-06
+57,Referral,Namur,Wallonia,10-49,Café,Pro,2026-01,111.47,6,672.54,0,2026-06
+58,Direct,Brussels,Brussels-Capital,1-9,Snack,Pro,2026-01,109.87,6,657.57,0,2026-06
+59,Referral,Flemish Brabant,Flanders,10-49,Restaurant,Pro,2026-01,107.45,6,644.41,0,2026-06
+60,Email,Flemish Brabant,Flanders,10-49,Café,Starter,2026-01,42.92,6,257.74,0,2026-06
+61,Referral,Hainaut,Wallonia,10-49,Restaurant,Pro,2026-01,99.08,6,595.49,0,2026-06
+62,Referral,Hainaut,Wallonia,10-49,Restaurant,Starter,2026-02,38.44,5,192.18,0,2026-06
+63,Direct,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-01,44.73,6,268.5,0,2026-06
+64,Referral,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-01,103.95,6,622.82,0,2026-06
+65,Google Ads,Flemish Brabant,Flanders,50+,Café,Group,2026-02,826.85,5,4120.28,0,2026-06
+66,Organic Search,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-01,48.99,6,294.11,0,2026-06
+67,Referral,Namur,Wallonia,50+,Restaurant,Group,2026-01,1536.69,6,9209.97,0,2026-06
+68,Email,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2026-01,45.43,6,272.13,0,2026-06
+69,Email,Liège,Wallonia,50+,Restaurant,Group,2026-04,950.73,3,2842.53,0,2026-06
+70,Referral,Antwerp,Flanders,1-9,Bar,Starter,2026-01,49.31,6,296.32,0,2026-06
+71,Organic Search,Brussels,Brussels-Capital,1-9,Hotel,Starter,2026-01,49.7,6,298.28,0,2026-06
+72,Organic Search,Liège,Wallonia,1-9,Restaurant,Starter,2026-01,46.6,6,280.13,0,2026-06
+73,Direct,Namur,Wallonia,1-9,Café,Starter,2026-01,41.73,6,250.27,0,2026-06
+74,Google Ads,Brussels,Brussels-Capital,1-9,Restaurant,Pro,2026-01,119.07,2,237.7,1,2026-02
+75,Direct,Hainaut,Wallonia,1-9,Hotel,Pro,2026-01,123.23,6,738.1,0,2026-06
+76,Organic Search,Hainaut,Wallonia,1-9,Snack,Starter,2026-01,41.2,6,247.26,0,2026-06
+77,Referral,Liège,Wallonia,10-49,Hotel,Starter,2026-01,48.23,6,289.58,0,2026-06
+78,Google Ads,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-01,43.26,6,260.07,0,2026-06
+79,Google Ads,Liège,Wallonia,10-49,Snack,Starter,2026-02,49.55,5,247.56,0,2026-06
+80,Direct,Namur,Wallonia,1-9,Bar,Starter,2026-02,41.68,5,208.59,0,2026-06
+81,Direct,East Flanders,Flanders,1-9,Snack,Starter,2026-01,45.5,6,273.31,0,2026-06
+82,Referral,Hainaut,Wallonia,10-49,Bar,Group,2026-01,729.59,6,4378.66,0,2026-06
+83,Organic Search,Liège,Wallonia,1-9,Restaurant,Starter,2026-01,43.35,6,259.39,0,2026-06
+84,Email,East Flanders,Flanders,1-9,Café,Starter,2026-02,44.57,5,222.91,0,2026-06
+85,Google Ads,Brussels,Brussels-Capital,10-49,Bar,Pro,2026-02,121.55,5,607.85,0,2026-06
+86,Direct,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-02,42.33,5,211.48,0,2026-06
+87,Direct,Namur,Wallonia,10-49,Restaurant,Pro,2026-02,111.12,5,555.92,0,2026-06
+88,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-01,49.43,6,296.41,0,2026-06
+89,Referral,Brussels,Brussels-Capital,10-49,Restaurant,Group,2026-02,726.91,5,3632.8,0,2026-06
+90,LinkedIn Ads,Brussels,Brussels-Capital,50+,Café,Group,2026-03,840.24,3,2518.08,1,2026-05
+91,Referral,Antwerp,Flanders,10-49,Restaurant,Pro,2026-01,118.27,2,236.27,1,2026-02
+92,Email,Liège,Wallonia,10-49,Restaurant,Pro,2026-02,117.59,5,588.18,0,2026-06
+93,Referral,Antwerp,Flanders,10-49,Hotel,Pro,2026-02,106.51,5,532.49,0,2026-06
+94,Organic Search,Flemish Brabant,Flanders,10-49,Bar,Pro,2026-02,118.24,5,590.31,0,2026-06
+95,Direct,East Flanders,Flanders,1-9,Restaurant,Starter,2026-02,41.41,5,206.93,0,2026-06
+96,Email,Liège,Wallonia,10-49,Hotel,Pro,2026-02,120.94,5,604.82,0,2026-06
+97,Referral,Hainaut,Wallonia,10-49,Restaurant,Pro,2026-02,103.72,5,517.6,0,2026-06
+98,Organic Search,Namur,Wallonia,10-49,Restaurant,Pro,2026-02,111.5,5,557.99,0,2026-06
+99,LinkedIn Ads,East Flanders,Flanders,1-9,Restaurant,Starter,2026-02,49.85,5,249.84,0,2026-06
+100,Direct,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-02,38.56,5,193.02,0,2026-06
+101,LinkedIn Ads,Brussels,Brussels-Capital,50+,Restaurant,Pro,2026-03,117.41,4,468.62,0,2026-06
+102,Direct,Namur,Wallonia,50+,Café,Pro,2026-02,112.8,5,564.48,0,2026-06
+103,Direct,Antwerp,Flanders,10-49,Restaurant,Pro,2026-02,118.23,5,590.58,0,2026-06
+104,Email,Brussels,Brussels-Capital,1-9,Hotel,Starter,2026-02,53.66,5,267.77,0,2026-06
+105,Email,Namur,Wallonia,1-9,Restaurant,Starter,2026-02,45.74,5,228.67,0,2026-06
+106,Referral,Hainaut,Wallonia,1-9,Restaurant,Pro,2026-02,112.11,5,560.61,0,2026-06
+107,Direct,Hainaut,Wallonia,1-9,Bar,Starter,2026-02,45.68,5,227.95,0,2026-06
+108,Email,Antwerp,Flanders,10-49,Restaurant,Starter,2026-02,44.1,5,220.56,0,2026-06
+109,Organic Search,East Flanders,Flanders,1-9,Restaurant,Starter,2026-02,46.41,5,231.2,0,2026-06
+110,Direct,Brussels,Brussels-Capital,50+,Café,Group,2026-03,583.46,4,2330.27,0,2026-06
+111,Email,Liège,Wallonia,1-9,Restaurant,Pro,2026-02,125.43,5,627.81,0,2026-06
+112,Meta Ads,Hainaut,Wallonia,1-9,Snack,Starter,2026-02,42.48,4,169.45,1,2026-05
+113,Direct,East Flanders,Flanders,10-49,Restaurant,Pro,2026-03,128.27,4,511.16,0,2026-06
+114,Referral,Hainaut,Wallonia,1-9,Restaurant,Pro,2026-03,101.87,4,406.83,1,2026-06
+115,LinkedIn Ads,Hainaut,Wallonia,50+,Restaurant,Pro,2026-02,114.12,5,572.43,0,2026-06
+116,Direct,Antwerp,Flanders,1-9,Restaurant,Pro,2026-02,104.45,5,521.07,0,2026-06
+117,Email,Liège,Wallonia,50+,Restaurant,Pro,2026-02,93.76,5,468.06,0,2026-06
+118,Email,Walloon Brabant,Wallonia,10-49,Café,Pro,2026-02,96.01,5,481.28,0,2026-06
+119,Email,Flemish Brabant,Flanders,10-49,Restaurant,Pro,2026-02,103.96,5,518.17,0,2026-06
+120,Organic Search,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-02,43.72,5,218.36,0,2026-06
+121,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2026-02,44.0,5,219.76,0,2026-06
+122,Referral,Hainaut,Wallonia,1-9,Café,Starter,2026-02,37.85,5,189.63,0,2026-06
+123,Referral,East Flanders,Flanders,10-49,Café,Pro,2026-02,117.84,5,590.16,0,2026-06
+124,Referral,Namur,Wallonia,1-9,Restaurant,Starter,2026-02,40.04,5,200.42,0,2026-06
+125,Organic Search,East Flanders,Flanders,10-49,Restaurant,Starter,2026-02,46.15,5,231.34,0,2026-06
+126,Referral,Brussels,Brussels-Capital,10-49,Snack,Pro,2026-02,130.06,5,648.15,0,2026-06
+127,Referral,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-02,122.42,5,609.48,0,2026-06
+128,Email,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-03,114.15,4,457.91,0,2026-06
+129,Email,Hainaut,Wallonia,10-49,Hotel,Starter,2026-02,48.15,5,240.54,0,2026-06
+130,Meta Ads,Walloon Brabant,Wallonia,1-9,Bar,Pro,2026-02,106.8,5,533.98,0,2026-06
+131,Email,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-04,121.44,3,364.75,0,2026-06
+132,Email,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-02,40.26,5,201.37,0,2026-06
+133,Referral,Antwerp,Flanders,10-49,Restaurant,Starter,2026-03,42.9,4,171.75,0,2026-06
+134,Email,Liège,Wallonia,1-9,Restaurant,Starter,2026-02,44.88,5,224.17,0,2026-06
+135,Email,Flemish Brabant,Flanders,10-49,Restaurant,Group,2026-03,588.69,4,2356.46,0,2026-06
+136,Email,Walloon Brabant,Wallonia,10-49,Restaurant,Pro,2026-03,121.87,4,487.92,0,2026-06
+137,Email,East Flanders,Flanders,1-9,Bar,Pro,2026-03,114.2,4,456.62,0,2026-06
+138,Referral,Hainaut,Wallonia,10-49,Snack,Pro,2026-02,108.45,5,543.63,0,2026-06
+139,Email,Walloon Brabant,Wallonia,10-49,Café,Group,2026-02,1171.31,5,5842.43,0,2026-06
+140,Email,East Flanders,Flanders,1-9,Bar,Pro,2026-03,113.08,4,452.59,0,2026-06
+141,Referral,Hainaut,Wallonia,10-49,Café,Group,2026-03,588.9,4,2350.28,0,2026-06
+142,Organic Search,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-03,51.98,4,208.19,0,2026-06
+143,Direct,Namur,Wallonia,1-9,Café,Starter,2026-02,43.7,5,218.59,0,2026-06
+144,Direct,Antwerp,Flanders,1-9,Snack,Starter,2026-02,45.88,5,229.34,0,2026-06
+145,Referral,East Flanders,Flanders,1-9,Café,Starter,2026-02,44.57,5,222.59,0,2026-06
+146,Organic Search,Liège,Wallonia,1-9,Snack,Starter,2026-02,48.52,5,242.62,0,2026-06
+147,Organic Search,East Flanders,Flanders,50+,Restaurant,Group,2026-04,1134.18,3,3402.01,0,2026-06
+148,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-02,47.12,5,235.18,0,2026-06
+149,Referral,Namur,Wallonia,1-9,Bar,Starter,2026-02,43.56,3,130.4,1,2026-04
+150,Organic Search,East Flanders,Flanders,1-9,Snack,Starter,2026-02,51.32,5,256.7,0,2026-06
+151,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-02,44.62,5,223.18,0,2026-06
+152,Referral,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-03,42.44,4,170.25,0,2026-06
+153,Google Ads,Walloon Brabant,Wallonia,1-9,Bar,Pro,2026-03,128.22,4,513.71,0,2026-06
+154,LinkedIn Ads,Walloon Brabant,Wallonia,10-49,Snack,Pro,2026-04,104.78,3,314.23,0,2026-06
+155,Referral,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-02,45.06,5,224.91,0,2026-06
+156,Direct,Brussels,Brussels-Capital,10-49,Snack,Starter,2026-02,42.52,5,212.96,0,2026-06
+157,Referral,Antwerp,Flanders,1-9,Bar,Starter,2026-03,46.04,4,184.46,0,2026-06
+158,Direct,Antwerp,Flanders,1-9,Café,Starter,2026-03,44.3,4,177.73,0,2026-06
+159,Google Ads,Walloon Brabant,Wallonia,1-9,Snack,Pro,2026-03,117.9,4,470.24,0,2026-06
+160,Email,Antwerp,Flanders,1-9,Restaurant,Pro,2026-03,110.66,4,443.96,0,2026-06
+161,LinkedIn Ads,Hainaut,Wallonia,50+,Hotel,Pro,2026-04,114.59,3,344.15,0,2026-06
+162,Direct,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-03,50.66,4,202.49,0,2026-06
+163,Email,Walloon Brabant,Wallonia,1-9,Restaurant,Pro,2026-03,109.79,4,439.46,0,2026-06
+164,Direct,Brussels,Brussels-Capital,10-49,Restaurant,Starter,2026-04,50.66,3,152.09,0,2026-06
+165,Email,Flemish Brabant,Flanders,1-9,Bar,Pro,2026-03,102.16,4,408.23,0,2026-06
+166,Email,Liège,Wallonia,10-49,Snack,Pro,2026-03,109.52,4,437.74,0,2026-06
+167,Referral,Liège,Wallonia,1-9,Restaurant,Starter,2026-04,53.92,3,162.18,0,2026-06
+168,Google Ads,Antwerp,Flanders,1-9,Hotel,Starter,2026-03,47.63,4,190.82,0,2026-06
+169,Referral,Antwerp,Flanders,1-9,Hotel,Pro,2026-03,105.92,4,423.9,0,2026-06
+170,Organic Search,Flemish Brabant,Flanders,50+,Restaurant,Pro,2026-03,112.69,2,225.33,1,2026-04
+171,Referral,Brussels,Brussels-Capital,10-49,Hotel,Starter,2026-03,41.19,4,164.61,0,2026-06
+172,LinkedIn Ads,Hainaut,Wallonia,50+,Bar,Group,2026-03,1012.97,4,4044.95,0,2026-06
+173,Direct,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-04,43.35,3,130.62,0,2026-06
+174,Email,Liège,Wallonia,1-9,Bar,Starter,2026-03,49.16,4,197.01,0,2026-06
+175,Google Ads,Flemish Brabant,Flanders,50+,Snack,Group,2026-05,1468.27,2,2921.63,0,2026-06
+176,Organic Search,Antwerp,Flanders,10-49,Bar,Pro,2026-04,96.98,3,291.1,0,2026-06
+177,Email,East Flanders,Flanders,1-9,Snack,Starter,2026-04,51.38,3,154.56,0,2026-06
+178,Direct,Antwerp,Flanders,10-49,Restaurant,Starter,2026-04,39.95,3,120.0,0,2026-06
+179,Organic Search,Liège,Wallonia,1-9,Restaurant,Pro,2026-03,107.09,4,428.44,0,2026-06
+180,Organic Search,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-04,45.13,3,135.27,0,2026-06
+181,Google Ads,Hainaut,Wallonia,1-9,Hotel,Starter,2026-03,52.17,4,208.72,0,2026-06
+182,Referral,Liège,Wallonia,1-9,Bar,Starter,2026-03,45.71,3,137.36,1,2026-05
+183,Referral,Walloon Brabant,Wallonia,50+,Café,Group,2026-04,1317.75,3,3957.11,0,2026-06
+184,Google Ads,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-04,44.17,3,132.25,0,2026-06
+185,Email,Antwerp,Flanders,1-9,Bar,Starter,2026-04,45.92,2,91.88,1,2026-05
+186,Email,Walloon Brabant,Wallonia,1-9,Café,Pro,2026-04,107.7,3,323.99,0,2026-06
+187,Referral,Flemish Brabant,Flanders,10-49,Bar,Starter,2026-04,41.76,3,125.15,0,2026-06
+188,Direct,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-04,48.51,3,146.17,0,2026-06
+189,Email,Walloon Brabant,Wallonia,50+,Café,Group,2026-04,1022.84,3,3075.34,0,2026-06
+190,Referral,East Flanders,Flanders,10-49,Café,Pro,2026-04,99.04,3,297.01,0,2026-06
+191,Referral,Hainaut,Wallonia,10-49,Restaurant,Group,2026-05,902.98,2,1808.78,0,2026-06
+192,Referral,Antwerp,Flanders,1-9,Hotel,Pro,2026-04,113.57,2,227.43,1,2026-05
+193,Organic Search,Namur,Wallonia,1-9,Restaurant,Pro,2026-04,109.39,2,219.09,1,2026-05
+194,Direct,Walloon Brabant,Wallonia,1-9,Café,Starter,2026-04,46.51,3,139.43,0,2026-06
+195,Direct,Liège,Wallonia,1-9,Restaurant,Starter,2026-04,49.44,3,147.81,0,2026-06
+196,Referral,Liège,Wallonia,1-9,Restaurant,Starter,2026-04,48.99,3,146.8,0,2026-06
+197,Meta Ads,East Flanders,Flanders,10-49,Restaurant,Pro,2026-05,108.58,2,216.86,0,2026-06
+198,Meta Ads,Namur,Wallonia,1-9,Bar,Starter,2026-04,51.07,2,102.51,1,2026-05
+199,Organic Search,Walloon Brabant,Wallonia,1-9,Bar,Starter,2026-04,44.48,3,133.1,0,2026-06
+200,Direct,Brussels,Brussels-Capital,10-49,Restaurant,Starter,2026-04,44.75,3,134.34,0,2026-06
+201,Direct,East Flanders,Flanders,1-9,Restaurant,Pro,2026-04,118.05,3,354.32,0,2026-06
+202,Direct,East Flanders,Flanders,10-49,Restaurant,Starter,2026-04,47.31,3,141.3,0,2026-06
+203,Email,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2026-04,109.05,3,327.44,0,2026-06
+204,Direct,Liège,Wallonia,1-9,Restaurant,Pro,2026-04,99.25,3,299.03,0,2026-06
+205,Referral,Hainaut,Wallonia,1-9,Hotel,Starter,2026-04,46.3,3,138.93,0,2026-06
+206,Google Ads,Flemish Brabant,Flanders,10-49,Bar,Pro,2026-04,109.77,3,330.14,0,2026-06
+207,LinkedIn Ads,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-05,111.9,2,222.95,0,2026-06
+208,Email,Antwerp,Flanders,10-49,Restaurant,Pro,2026-05,116.69,2,233.5,0,2026-06
+209,Direct,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-04,43.99,3,131.92,0,2026-06
+210,Google Ads,Brussels,Brussels-Capital,1-9,Hotel,Starter,2026-04,46.18,3,138.18,0,2026-06
+211,Email,Namur,Wallonia,1-9,Restaurant,Pro,2026-04,108.95,3,328.43,0,2026-06
+212,Referral,Hainaut,Wallonia,1-9,Café,Starter,2026-04,45.25,3,135.63,0,2026-06
+213,Referral,Hainaut,Wallonia,10-49,Restaurant,Pro,2026-04,94.63,3,283.45,0,2026-06
+214,Direct,Hainaut,Wallonia,10-49,Restaurant,Starter,2026-05,43.02,2,85.88,0,2026-06
+215,Email,Liège,Wallonia,10-49,Bar,Starter,2026-05,43.34,2,86.66,0,2026-06
+216,Referral,Hainaut,Wallonia,1-9,Bar,Pro,2026-04,103.04,3,309.85,0,2026-06
+217,Organic Search,Brussels,Brussels-Capital,1-9,Café,Starter,2026-04,48.26,3,144.98,0,2026-06
+218,Referral,Liège,Wallonia,1-9,Snack,Pro,2026-04,116.97,3,351.03,0,2026-06
+219,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-05,51.35,2,102.79,0,2026-06
+220,Direct,Flemish Brabant,Flanders,10-49,Restaurant,Starter,2026-04,45.18,2,90.34,1,2026-05
+221,Email,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-05,46.42,2,92.95,0,2026-06
+222,Email,Antwerp,Flanders,1-9,Restaurant,Starter,2026-04,51.67,3,154.92,0,2026-06
+223,Direct,Namur,Wallonia,10-49,Restaurant,Starter,2026-04,49.34,3,147.98,0,2026-06
+224,Referral,Antwerp,Flanders,1-9,Bar,Starter,2026-04,42.98,3,129.22,0,2026-06
+225,Referral,Namur,Wallonia,50+,Restaurant,Group,2026-05,1425.64,2,2844.68,0,2026-06
+226,Google Ads,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-04,46.77,3,140.35,0,2026-06
+227,Organic Search,Antwerp,Flanders,10-49,Restaurant,Starter,2026-05,45.27,2,90.54,0,2026-06
+228,Organic Search,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-04,113.39,3,340.76,0,2026-06
+229,Email,Antwerp,Flanders,1-9,Restaurant,Starter,2026-04,46.08,3,138.27,0,2026-06
+230,Direct,Hainaut,Wallonia,1-9,Café,Starter,2026-04,48.87,3,146.98,0,2026-06
+231,LinkedIn Ads,East Flanders,Flanders,50+,Restaurant,Group,2026-06,1193.53,1,1199.17,0,2026-06
+232,Email,Hainaut,Wallonia,10-49,Hotel,Pro,2026-05,116.8,2,233.54,0,2026-06
+233,Google Ads,Brussels,Brussels-Capital,1-9,Café,Starter,2026-04,50.3,3,151.49,0,2026-06
+234,Direct,Liège,Wallonia,10-49,Restaurant,Pro,2026-05,110.89,2,220.68,0,2026-06
+235,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2026-04,120.83,3,361.84,0,2026-06
+236,Referral,Liège,Wallonia,10-49,Restaurant,Pro,2026-05,108.87,2,218.66,0,2026-06
+237,Organic Search,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2026-04,107.96,3,323.82,0,2026-06
+238,Email,Antwerp,Flanders,10-49,Restaurant,Starter,2026-05,41.28,2,82.7,0,2026-06
+239,Referral,Flemish Brabant,Flanders,10-49,Bar,Pro,2026-05,123.27,2,246.79,0,2026-06
+240,Direct,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-05,43.12,2,86.08,0,2026-06
+241,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2026-04,42.65,3,127.81,0,2026-06
+242,Organic Search,East Flanders,Flanders,1-9,Restaurant,Starter,2026-04,50.92,3,152.61,0,2026-06
+243,Email,Namur,Wallonia,1-9,Hotel,Pro,2026-05,120.61,2,240.24,0,2026-06
+244,Referral,Brussels,Brussels-Capital,10-49,Hotel,Pro,2026-05,110.35,2,221.14,0,2026-06
+245,Organic Search,East Flanders,Flanders,10-49,Restaurant,Starter,2026-05,46.28,2,92.17,0,2026-06
+246,Referral,Namur,Wallonia,1-9,Restaurant,Starter,2026-05,47.99,2,96.25,0,2026-06
+247,Referral,Brussels,Brussels-Capital,1-9,Hotel,Starter,2026-05,48.17,2,96.05,0,2026-06
+248,Google Ads,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-05,49.3,2,99.14,0,2026-06
+249,Direct,Antwerp,Flanders,1-9,Snack,Starter,2026-04,45.83,3,137.59,0,2026-06
+250,Organic Search,Liège,Wallonia,10-49,Restaurant,Pro,2026-05,110.86,2,221.61,0,2026-06
+251,Email,Walloon Brabant,Wallonia,1-9,Restaurant,Starter,2026-05,49.32,2,98.43,0,2026-06
+252,Email,East Flanders,Flanders,1-9,Bar,Starter,2026-05,42.57,2,85.21,0,2026-06
+253,Referral,Antwerp,Flanders,1-9,Snack,Starter,2026-05,42.67,2,85.21,0,2026-06
+254,Google Ads,Namur,Wallonia,1-9,Bar,Starter,2026-05,48.64,2,96.88,0,2026-06
+255,Organic Search,Brussels,Brussels-Capital,10-49,Bar,Pro,2026-05,108.59,2,216.91,0,2026-06
+256,Referral,Walloon Brabant,Wallonia,50+,Restaurant,Pro,2026-05,123.15,2,246.85,0,2026-06
+257,Email,Hainaut,Wallonia,1-9,Hotel,Pro,2026-05,126.54,2,253.59,0,2026-06
+258,Referral,Brussels,Brussels-Capital,1-9,Snack,Pro,2026-05,123.65,2,246.18,0,2026-06
+259,Referral,Walloon Brabant,Wallonia,1-9,Bar,Starter,2026-05,43.95,2,88.06,0,2026-06
+260,Email,Walloon Brabant,Wallonia,50+,Snack,Group,2026-06,781.24,1,777.15,0,2026-06
+261,Organic Search,East Flanders,Flanders,50+,Café,Group,2026-06,1092.68,1,1091.41,0,2026-06
+262,Referral,Namur,Wallonia,10-49,Café,Pro,2026-06,110.67,1,111.01,0,2026-06
+263,Referral,Liège,Wallonia,1-9,Restaurant,Starter,2026-05,40.82,2,81.56,0,2026-06
+264,Email,Antwerp,Flanders,10-49,Snack,Pro,2026-05,110.08,2,219.95,0,2026-06
+265,Referral,Namur,Wallonia,1-9,Restaurant,Starter,2026-05,45.31,2,90.0,0,2026-06
+266,Organic Search,East Flanders,Flanders,10-49,Bar,Group,2026-06,835.16,1,835.95,0,2026-06
+267,Email,Brussels,Brussels-Capital,10-49,Bar,Group,2026-05,570.43,2,1137.37,0,2026-06
+268,Referral,Namur,Wallonia,1-9,Restaurant,Starter,2026-05,38.79,2,77.17,0,2026-06
+269,Organic Search,Namur,Wallonia,10-49,Snack,Group,2026-06,1184.01,1,1178.42,0,2026-06
+270,Referral,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-05,44.11,2,88.38,0,2026-06
+271,Referral,Antwerp,Flanders,1-9,Snack,Starter,2026-05,51.63,2,103.65,0,2026-06
+272,Google Ads,Brussels,Brussels-Capital,10-49,Bar,Starter,2026-06,43.11,1,43.01,0,2026-06
+273,LinkedIn Ads,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2026-05,124.31,2,248.82,0,2026-06
+274,Email,East Flanders,Flanders,50+,Bar,Pro,2026-06,130.22,1,129.96,0,2026-06
+275,Referral,Brussels,Brussels-Capital,50+,Restaurant,Group,2026-05,864.21,2,1736.02,0,2026-06
+276,Organic Search,Antwerp,Flanders,50+,Restaurant,Group,2026-06,1228.4,1,1222.28,0,2026-06
+277,LinkedIn Ads,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-05,44.13,2,87.99,0,2026-06
+278,Meta Ads,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-06,47.67,1,48.18,0,2026-06
+279,Referral,Namur,Wallonia,1-9,Restaurant,Pro,2026-05,93.97,2,188.41,0,2026-06
+280,LinkedIn Ads,Liège,Wallonia,1-9,Snack,Pro,2026-06,104.64,1,104.32,0,2026-06
+281,Organic Search,Hainaut,Wallonia,1-9,Restaurant,Starter,2026-05,44.75,2,89.01,0,2026-06
+282,Referral,Brussels,Brussels-Capital,10-49,Bar,Pro,2026-05,106.65,2,213.64,0,2026-06
+283,Referral,Brussels,Brussels-Capital,50+,Bar,Pro,2026-06,98.86,1,97.9,0,2026-06
+284,Direct,Hainaut,Wallonia,10-49,Bar,Pro,2026-05,112.74,2,225.49,0,2026-06
+285,LinkedIn Ads,Brussels,Brussels-Capital,10-49,Snack,Pro,2026-06,111.92,1,112.45,0,2026-06
+286,Direct,Hainaut,Wallonia,1-9,Café,Starter,2026-05,40.14,2,80.66,0,2026-06
+287,Email,Namur,Wallonia,50+,Restaurant,Group,2026-06,1413.83,1,1414.21,0,2026-06
+288,Email,Antwerp,Flanders,50+,Snack,Pro,2026-05,112.54,2,225.18,0,2026-06
+289,Referral,Namur,Wallonia,10-49,Café,Pro,2026-05,112.58,2,225.22,0,2026-06
+290,Direct,Antwerp,Flanders,1-9,Bar,Pro,2026-05,112.27,2,223.71,0,2026-06
+291,Email,Walloon Brabant,Wallonia,50+,Restaurant,Group,2026-05,1371.13,2,2741.97,0,2026-06
+292,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Pro,2026-05,113.5,2,225.92,0,2026-06
+293,Google Ads,Brussels,Brussels-Capital,1-9,Bar,Starter,2026-05,43.49,2,87.09,0,2026-06
+294,Organic Search,Antwerp,Flanders,50+,Bar,Group,2026-06,500.86,1,501.57,0,2026-06
+295,Organic Search,Walloon Brabant,Wallonia,1-9,Bar,Pro,2026-06,109.53,1,109.13,0,2026-06
+296,Direct,East Flanders,Flanders,10-49,Restaurant,Pro,2026-06,101.25,1,100.62,0,2026-06
+297,Google Ads,Brussels,Brussels-Capital,10-49,Restaurant,Pro,2026-06,113.29,1,113.23,0,2026-06
+298,Organic Search,Liège,Wallonia,1-9,Restaurant,Pro,2026-05,110.45,2,221.46,0,2026-06
+299,LinkedIn Ads,East Flanders,Flanders,10-49,Restaurant,Pro,2026-06,97.26,1,97.71,0,2026-06
+300,Direct,East Flanders,Flanders,50+,Restaurant,Group,2026-06,862.53,1,864.39,0,2026-06
+301,Referral,Brussels,Brussels-Capital,1-9,Café,Pro,2026-06,116.88,1,117.38,0,2026-06
+302,Referral,Walloon Brabant,Wallonia,1-9,Restaurant,Starter,2026-05,45.6,2,91.08,0,2026-06
+303,Google Ads,Liège,Wallonia,1-9,Restaurant,Starter,2026-06,44.8,1,44.84,0,2026-06
+304,LinkedIn Ads,Antwerp,Flanders,1-9,Bar,Starter,2026-06,45.55,1,45.68,0,2026-06
+305,Direct,Antwerp,Flanders,50+,Restaurant,Group,2026-06,541.38,1,540.95,0,2026-06
+306,LinkedIn Ads,Namur,Wallonia,50+,Snack,Group,2026-06,1099.14,1,1101.4,0,2026-06
+307,Organic Search,East Flanders,Flanders,10-49,Bar,Pro,2026-06,110.36,1,110.56,0,2026-06
+308,Direct,Hainaut,Wallonia,1-9,Hotel,Starter,2026-06,45.5,1,45.39,0,2026-06
+309,Email,East Flanders,Flanders,10-49,Restaurant,Starter,2026-06,46.67,1,46.81,0,2026-06
+310,Referral,East Flanders,Flanders,1-9,Bar,Starter,2026-06,42.55,1,42.7,0,2026-06
+311,Direct,Walloon Brabant,Wallonia,10-49,Restaurant,Pro,2026-06,110.86,1,110.21,0,2026-06
+312,Google Ads,Hainaut,Wallonia,1-9,Snack,Starter,2026-06,50.36,1,50.49,0,2026-06
+313,Direct,Antwerp,Flanders,1-9,Restaurant,Starter,2026-06,52.84,1,52.53,0,2026-06
+314,Email,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-05,49.62,2,99.16,0,2026-06
+315,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2026-06,42.36,1,42.52,0,2026-06
+316,Referral,Hainaut,Wallonia,1-9,Snack,Starter,2026-06,44.41,1,44.54,0,2026-06
+317,Referral,Liège,Wallonia,10-49,Snack,Group,2026-06,943.44,1,934.26,0,2026-06
+318,Email,Liège,Wallonia,10-49,Restaurant,Pro,2026-06,100.84,1,101.32,0,2026-06
+319,Referral,Flemish Brabant,Flanders,1-9,Restaurant,Starter,2026-06,48.01,1,48.1,0,2026-06
+320,Referral,Walloon Brabant,Wallonia,1-9,Restaurant,Starter,2026-06,43.04,1,42.67,0,2026-06
+321,Referral,Hainaut,Wallonia,10-49,Restaurant,Group,2026-06,1502.79,1,1513.33,0,2026-06
+322,Direct,Brussels,Brussels-Capital,1-9,Café,Pro,2026-06,126.54,1,126.9,0,2026-06
+323,Direct,Brussels,Brussels-Capital,50+,Restaurant,Group,2026-06,765.06,1,760.87,0,2026-06
+324,Referral,Liège,Wallonia,1-9,Snack,Pro,2026-06,112.21,1,112.47,0,2026-06
+325,Organic Search,East Flanders,Flanders,1-9,Restaurant,Starter,2026-06,48.62,1,48.8,0,2026-06
+326,Referral,Namur,Wallonia,1-9,Bar,Starter,2026-06,43.27,1,43.48,0,2026-06
+327,Email,East Flanders,Flanders,10-49,Restaurant,Pro,2026-06,112.87,1,112.43,0,2026-06
+328,Referral,Antwerp,Flanders,1-9,Snack,Starter,2026-06,43.05,1,42.89,0,2026-06
+329,Referral,Brussels,Brussels-Capital,1-9,Restaurant,Pro,2026-06,107.52,1,107.89,0,2026-06
+330,Referral,Brussels,Brussels-Capital,1-9,Restaurant,Starter,2026-06,44.51,1,44.57,0,2026-06
+331,LinkedIn Ads,Namur,Wallonia,1-9,Restaurant,Starter,2026-06,45.16,1,45.07,0,2026-06
+332,Meta Ads,East Flanders,Flanders,1-9,Restaurant,Starter,2026-06,48.98,1,49.23,0,2026-06
+333,Direct,Antwerp,Flanders,10-49,Restaurant,Pro,2026-06,116.43,1,117.04,0,2026-06
+334,Email,Brussels,Brussels-Capital,10-49,Snack,Pro,2026-06,116.84,1,117.33,0,2026-06
+335,Direct,Walloon Brabant,Wallonia,1-9,Restaurant,Pro,2026-06,125.09,1,124.81,0,2026-06
+336,Direct,East Flanders,Flanders,1-9,Restaurant,Pro,2026-06,101.7,1,101.4,0,2026-06
+337,Email,Namur,Wallonia,10-49,Restaurant,Pro,2026-06,103.37,1,103.56,0,2026-06
+338,Direct,Antwerp,Flanders,10-49,Bar,Pro,2026-06,105.37,1,105.71,0,2026-06
+339,Referral,Walloon Brabant,Wallonia,10-49,Restaurant,Pro,2026-06,113.42,1,113.2,0,2026-06
+340,Direct,Brussels,Brussels-Capital,1-9,Snack,Starter,2026-06,44.66,1,44.62,0,2026-06
+341,Referral,Liège,Wallonia,1-9,Restaurant,Pro,2026-06,100.45,1,100.17,0,2026-06
+342,Organic Search,Liège,Wallonia,10-49,Restaurant,Starter,2026-06,52.96,1,53.04,0,2026-06
+343,Referral,Brussels,Brussels-Capital,1-9,Restaurant,Pro,2026-06,120.59,1,121.29,0,2026-06
+344,Google Ads,Brussels,Brussels-Capital,1-9,Snack,Pro,2026-06,131.33,1,132.22,0,2026-06
+345,Organic Search,Brussels,Brussels-Capital,1-9,Café,Pro,2026-06,98.38,1,98.77,0,2026-06
+346,Organic Search,East Flanders,Flanders,1-9,Restaurant,Pro,2026-06,127.58,1,127.81,0,2026-06
+347,Email,Hainaut,Wallonia,1-9,Bar,Pro,2026-06,118.83,1,118.79,0,2026-06
+348,Email,Hainaut,Wallonia,1-9,Café,Starter,2026-06,50.77,1,50.74,0,2026-06
+349,Referral,Namur,Wallonia,1-9,Bar,Starter,2026-06,45.59,1,45.39,0,2026-06
+350,Organic Search,Liège,Wallonia,1-9,Snack,Starter,2026-06,45.19,1,44.98,0,2026-06

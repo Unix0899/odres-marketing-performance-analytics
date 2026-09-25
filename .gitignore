@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+# Power BI local cache and settings (the PBIP definition itself is versioned)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# secrets - never commit
+.env
+.env.*

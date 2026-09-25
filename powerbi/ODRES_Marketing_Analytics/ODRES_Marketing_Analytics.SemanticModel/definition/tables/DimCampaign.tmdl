@@ -1,0 +1,71 @@
+table DimCampaign
+	lineageTag: bf3db4ac-9b47-5310-95c8-b702f0971a70
+
+	column campaign_id
+		dataType: int64
+		isKey
+		isHidden
+		summarizeBy: none
+		sourceColumn: campaign_id
+		lineageTag: ecd5b176-4d04-5d30-8bee-a92e601a07f6
+
+	column campaign_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: campaign_name
+		lineageTag: c3a36aa7-8129-50e4-909b-fb37abaf373a
+
+	column channel_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: 56252a74-1a66-5389-ac98-1935b2c84142
+
+	column objective
+		dataType: string
+		summarizeBy: none
+		sourceColumn: objective
+		lineageTag: d5f5a4e8-f393-593f-a52e-e14d12e3ed7a
+
+	column start_date
+		dataType: string
+		summarizeBy: none
+		sourceColumn: start_date
+		lineageTag: b4159f77-c1ef-5be1-b568-a4f7b8c46079
+
+	column 'Recommendation' =
+			VAR ChannelId = DimCampaign[channel_id]
+			VAR IsPaid = LOOKUPVALUE ( DimChannel[is_paid], DimChannel[channel_id], ChannelId )
+			VAR Spend = CALCULATE ( [Total Spend] )
+			VAR Ratio = DIVIDE ( CALCULATE ( [Won Revenue] ), Spend )
+			VAR SqlRate = DIVIDE ( CALCULATE ( [SQLs] ), CALCULATE ( [Leads] ) )
+			VAR ChannelSqlRate =
+			    AVERAGEX (
+			        FILTER ( ALL ( DimCampaign ), DimCampaign[channel_id] = ChannelId ),
+			        DIVIDE ( CALCULATE ( [SQLs] ), CALCULATE ( [Leads] ) )
+			    )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ISBLANK ( ChannelId ), "UNASSIGNED",
+			        IsPaid = 0, "NON-PAID",
+			        Ratio >= 1.5 && SqlRate >= ChannelSqlRate, "SCALE",
+			        Ratio >= 1.0, "MAINTAIN",
+			        Ratio >= 0.5, "OPTIMISE",
+			        "REDUCE"
+			    )
+		dataType: string
+		summarizeBy: none
+		lineageTag: d1475e2e-1457-57f2-8fef-e54880aac64e
+
+	partition DimCampaign = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimCampaign.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"campaign_id", Int64.Type}, {"campaign_name", type text}, {"channel_id", Int64.Type}, {"objective", type text}, {"start_date", type text}}, "en-US")
+				in
+				    Typed

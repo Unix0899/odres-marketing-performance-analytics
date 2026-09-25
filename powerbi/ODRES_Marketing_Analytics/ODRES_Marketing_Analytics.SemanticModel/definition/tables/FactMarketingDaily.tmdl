@@ -1,0 +1,134 @@
+table FactMarketingDaily
+	lineageTag: a3b845f3-d48d-5e82-accb-153c1c2635f4
+
+	/// Paid media, email tool, partner and event costs.
+	measure 'Total Spend' = SUM ( FactMarketingDaily[spend] )
+		formatString: "€ #,0"
+		displayFolder: 1 Acquisition
+		lineageTag: eb83e8b0-4d06-52bc-a17a-326b4f7ed4f1
+
+	measure 'Impressions' = SUM ( FactMarketingDaily[impressions_count] )
+		formatString: "#,0"
+		displayFolder: 1 Acquisition
+		lineageTag: bbbdf75c-99d7-5f8d-af95-5bb2171094c1
+
+	measure 'Clicks' = SUM ( FactMarketingDaily[clicks_count] )
+		formatString: "#,0"
+		displayFolder: 1 Acquisition
+		lineageTag: 8791ca8f-572e-5b89-96ee-a4022688a4d2
+
+	measure 'Sessions' = SUM ( FactMarketingDaily[sessions_count] )
+		formatString: "#,0"
+		displayFolder: 1 Acquisition
+		lineageTag: 241ca15a-6eb8-5884-9bab-bc14bdf80131
+
+	/// Click-through rate.
+	measure 'CTR' = DIVIDE ( [Clicks], [Impressions] )
+		formatString: "0.00%"
+		displayFolder: 1 Acquisition
+		lineageTag: c3cf96ee-674f-5896-8d4e-fa5382c3c93a
+
+	/// Cost per click.
+	measure 'CPC' = DIVIDE ( [Total Spend], [Clicks] )
+		formatString: "€ #,0.00"
+		displayFolder: 1 Acquisition
+		lineageTag: 37015c1d-0411-5860-9a20-fb96c1b5ca25
+
+	/// Cost per lead. Blank when there is no spend (not applicable), never 0.
+	measure 'CPL' = IF ( [Total Spend] > 0, DIVIDE ( [Total Spend], [Leads] ) )
+		formatString: "€ #,0.00"
+		displayFolder: 4 Efficiency
+		lineageTag: 72be102d-32bd-505c-b78a-fc318a54797f
+
+	/// Customer acquisition cost. Blank when there is no spend.
+	measure 'CAC' = IF ( [Total Spend] > 0, DIVIDE ( [Total Spend], [Customers] ) )
+		formatString: "€ #,0"
+		displayFolder: 4 Efficiency
+		lineageTag: 137785f3-a0e8-5f2c-9bef-814e82b3ac6c
+
+	/// First-year revenue per euro spent.
+	measure 'Revenue / Spend' = DIVIDE ( [Won Revenue], [Total Spend] )
+		formatString: "0.0x"
+		displayFolder: 4 Efficiency
+		lineageTag: eb38e54d-b586-5587-a4f9-234b05499852
+
+	/// Spend of paid media channels only.
+	measure 'Paid Spend' = CALCULATE ( [Total Spend], DimChannel[is_paid] = 1 )
+		formatString: "€ #,0"
+		displayFolder: 9 Report helpers
+		lineageTag: c2a9cbb1-da8a-5c74-92f3-2188c425a399
+
+	/// CAC of paid media channels only.
+	measure 'Paid CAC' = CALCULATE ( [CAC], DimChannel[is_paid] = 1 )
+		formatString: "€ #,0"
+		displayFolder: 9 Report helpers
+		lineageTag: 3095fd1c-008c-50d6-a7e5-25c293f2de21
+
+	measure 'Campaigns to Scale' = CALCULATE ( COUNTROWS ( DimCampaign ), DimCampaign[Recommendation] = "SCALE" ) + 0
+		formatString: "0"
+		displayFolder: 9 Report helpers
+		lineageTag: ac96b421-27c5-5b92-a3df-8546a0ac9846
+
+	measure 'Campaigns to Reduce' = CALCULATE ( COUNTROWS ( DimCampaign ), DimCampaign[Recommendation] = "REDUCE" ) + 0
+		formatString: "0"
+		displayFolder: 9 Report helpers
+		lineageTag: 87c4aab8-ff14-58b5-a121-70a3cf85c516
+
+	column date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: date_key
+		lineageTag: 8f002538-c8c8-52f3-8064-8bab9d0f4655
+
+	column campaign_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: campaign_id
+		lineageTag: 20031d11-1abd-5b33-abab-ccaf8ba63990
+
+	column channel_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: d3f4305c-7fef-5f86-81f3-c4e685a9e6ce
+
+	column impressions_count
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: impressions
+		lineageTag: 90a863bc-a523-58eb-8548-a4a4d8399776
+
+	column clicks_count
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: clicks
+		lineageTag: 0c724dfe-bb40-53ed-bd10-ef4d23663463
+
+	column sessions_count
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: sessions
+		lineageTag: 1197e632-2293-5912-9b40-e4d7b882439f
+
+	column spend
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: spend
+		lineageTag: 9f26a2e2-02e2-54dd-b36a-3c99860e5737
+
+	partition FactMarketingDaily = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactMarketingDaily.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"date_key", Int64.Type}, {"campaign_id", Int64.Type}, {"channel_id", Int64.Type}, {"impressions", Int64.Type}, {"clicks", Int64.Type}, {"sessions", Int64.Type}, {"spend", type number}}, "en-US")
+				in
+				    Typed

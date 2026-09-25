@@ -1,0 +1,53 @@
+file,statement,label,rows_returned,ms,status
+03_data_quality.sql,1,,9,1.3,PASS
+03_data_quality.sql,2,"Q25b. Business-rule checks: one row per rule, failures must be 0",8,2.2,PASS
+03_data_quality.sql,3,Q25c. Referential integrity: facts pointing to missing dimension rows ,5,1.9,PASS
+03_data_quality.sql,4,Q25d. Uniqueness of business keys (GROUP BY ... HAVING COUNT(*) > 1),3,1.1,PASS
+03_data_quality.sql,5,"Q25e. Documented warnings: kept on purpose, but monitored",3,0.6,PASS
+03_data_quality.sql,6,Q25f. Completeness by month: a month with missing marketing days would,8,2.1,PASS
+04_kpi_queries.sql,1,,1,3.6,PASS
+04_kpi_queries.sql,2,Q03. CPL by channel (paid channels only: CPL is not meaningful without,5,5.5,PASS
+04_kpi_queries.sql,3,"Q04. CAC by channel, compared with the average deal value",7,6.0,PASS
+04_kpi_queries.sql,4,Q20. Paid vs non-paid acquisition,2,11.7,PASS
+04_kpi_queries.sql,5,Q14. Lead score by source: does the channel bring qualified prospects?,7,1.8,PASS
+04_kpi_queries.sql,6,Q15. Month-over-month lead growth (window function LAG),8,3.9,PASS
+04_kpi_queries.sql,7,Q16. Month-over-month won-revenue growth + 3-month rolling average,8,7.1,PASS
+04_kpi_queries.sql,8,"Q23. MRR and active customers by month, with net new MRR",8,7.4,PASS
+04_kpi_queries.sql,9,Q24. Churn: monthly logo churn rate and churn by acquisition channel,8,6.9,PASS
+04_kpi_queries.sql,10,,7,1.6,PASS
+05_campaign_analysis.sql,1,,22,7.1,PASS
+05_campaign_analysis.sql,2,"Q10. Revenue by campaign, with rank overall and rank inside its channe",21,6.7,PASS
+05_campaign_analysis.sql,3,"Q17. Best paid campaigns: revenue per euro spent, only campaigns with ",9,6.2,PASS
+05_campaign_analysis.sql,4,Q18. Campaigns with high spend and weak conversion (budget waste candi,3,13.0,PASS
+05_campaign_analysis.sql,5,Q18b. Budget recommendation per paid campaign (SCALE / MAINTAIN / OPTI,4,6.8,PASS
+05_campaign_analysis.sql,6,Q17b. Monthly spend and leads for the top-3 revenue campaigns (trend c,23,880.7,PASS
+06_funnel_analysis.sql,1,,7,6.3,PASS
+06_funnel_analysis.sql,2,Q05-Q08. Company-wide stage conversions in long format (feeds a funnel,6,34.6,PASS
+06_funnel_analysis.sql,3,Q01b. Biggest drop-off per channel: which stage should each channel fi,7,33.9,PASS
+06_funnel_analysis.sql,4,Q19. Channels with strong lead quality but low volume (candidates to s,2,12.2,PASS
+06_funnel_analysis.sql,5,"Q19b. The opposite: high volume, low quality (volume alone is misleadi",7,17.1,PASS
+06_funnel_analysis.sql,6,Q14b. Lead-score bands: is the score predictive of conversion?,5,4.9,PASS
+06_funnel_analysis.sql,7,Q01c. Funnel trend: monthly stage conversions (is quality improving ov,8,4.1,PASS
+07_revenue_analysis.sql,1,,7,5.5,PASS
+07_revenue_analysis.sql,2,Q12. Average deal value and win rate by channel,7,1.1,PASS
+07_revenue_analysis.sql,3,"Q13. Sales cycle: won vs lost, by company size (days from opportunity ",3,1.0,PASS
+07_revenue_analysis.sql,4,Q21. Performance by region,8,6.3,PASS
+07_revenue_analysis.sql,5,Q22. Performance by company size: volume vs value,3,6.9,PASS
+07_revenue_analysis.sql,6,"Q13b. Pipeline status: won, lost and still-open value",3,0.9,PASS
+07_revenue_analysis.sql,7,Q13c. Open pipeline by campaign at the end of the period (what is comi,21,0.4,PASS
+07_revenue_analysis.sql,8,Q12b. Plan mix: which plan drives revenue?,3,1.2,PASS
+07_revenue_analysis.sql,9,Q23b. New customers and new MRR by acquisition month and channel group,16,1.3,PASS
+integrity_tests.sql,1,sql_implies_mql,1,0.0,PASS
+integrity_tests.sql,2,spend_not_negative,1,0.0,PASS
+integrity_tests.sql,3,lead_score_in_range,1,0.0,PASS
+integrity_tests.sql,4,won_value_not_negative,1,0.0,PASS
+integrity_tests.sql,5,won_deal_has_value,1,0.0,PASS
+integrity_tests.sql,6,no_missing_critical_ids,1,0.0,PASS
+integrity_tests.sql,7,opportunity_has_lead,1,0.0,PASS
+integrity_tests.sql,8,customer_has_won_opportunity,1,0.0,PASS
+integrity_tests.sql,9,customers_equal_won_opportunities,1,0.0,PASS
+integrity_tests.sql,10,funnel_is_monotonic,1,0.0,PASS
+integrity_tests.sql,11,view_totals_match_facts,1,0.0,PASS
+integrity_tests.sql,12,revenue_reconciles,1,0.0,PASS
+integrity_tests.sql,13,no_cac_for_unpaid_channels,1,0.0,PASS
+integrity_tests.sql,14,close_after_create,1,0.0,PASS

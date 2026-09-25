@@ -1,0 +1,22 @@
+campaign_id,campaign_name,channel_id,objective,start_date
+1,High Intent Search,1,Conversion,2025-11-01
+2,Competitor Search,1,Conversion,2025-11-01
+3,Restaurant Operations,1,Conversion,2025-11-15
+4,Decision Makers,2,Lead gen,2025-11-01
+5,Operations Leaders,2,Lead gen,2025-12-01
+6,SMB Growth,2,Lead gen,2026-01-15
+7,Awareness Video,3,Awareness,2025-11-01
+8,Lead Magnet,3,Lead gen,2025-11-01
+9,Retargeting,3,Conversion,2026-01-15
+10,SEO Product Pages,4,Organic,2025-11-01
+11,SEO Guides,4,Organic,2025-11-01
+12,SEO Comparison,4,Organic,2026-02-01
+13,Brand Direct,5,Direct,2025-11-01
+14,Returning Visitors,5,Direct,2025-11-01
+15,Demo Page Direct,5,Direct,2025-12-01
+16,Newsletter,6,Nurture,2025-11-01
+17,Lead Nurture,6,Nurture,2025-12-01
+18,Reactivation,6,Nurture,2026-02-01
+19,Partner Network,7,Partnership,2025-11-01
+20,Customer Referral,7,Partnership,2025-11-01
+21,Industry Events,7,Events,2026-02-15

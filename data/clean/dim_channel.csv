@@ -1,0 +1,8 @@
+channel_id,channel_name,channel_group,is_paid
+1,Google Ads,Paid Search,1
+2,LinkedIn Ads,Paid Social,1
+3,Meta Ads,Paid Social,1
+4,Organic Search,Organic,0
+5,Direct,Direct,0
+6,Email,Owned,0
+7,Referral,Referral,0

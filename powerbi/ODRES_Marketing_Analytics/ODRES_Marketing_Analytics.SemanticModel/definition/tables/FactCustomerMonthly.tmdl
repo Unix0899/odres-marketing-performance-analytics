@@ -1,0 +1,89 @@
+table FactCustomerMonthly
+	lineageTag: c22022f1-ffeb-5df9-844d-2bf5b9750ff7
+
+	/// Monthly recurring revenue of active customers (sum over the months in context).
+	measure 'MRR' = CALCULATE ( SUM ( FactCustomerMonthly[mrr_amount] ), FactCustomerMonthly[is_active] = 1 )
+		formatString: "€ #,0"
+		displayFolder: 6 Customers
+		lineageTag: 6ac6ac11-e068-5e8f-8157-f1e7a37466f0
+
+	/// MRR of the last month in the filter context: use this one on cards.
+	measure 'MRR (end of period)' =
+			VAR LastMonth = MAX ( FactCustomerMonthly[month_key] )
+			RETURN
+			    CALCULATE ( [MRR], FactCustomerMonthly[month_key] = LastMonth )
+		formatString: "€ #,0"
+		displayFolder: 6 Customers
+		lineageTag: e0eeae5d-3083-5ee0-b87f-b5e03445a424
+
+	measure 'Active Customers' = CALCULATE ( DISTINCTCOUNT ( FactCustomerMonthly[customer_id] ), FactCustomerMonthly[is_active] = 1 )
+		formatString: "#,0"
+		displayFolder: 6 Customers
+		lineageTag: 1a0663e8-2c4b-5fa0-b6d2-4ae83f80ffd2
+
+	measure 'Churned Customers' = SUM ( FactCustomerMonthly[is_churned] )
+		formatString: "#,0"
+		displayFolder: 6 Customers
+		lineageTag: cc2fea3c-e712-59db-9afa-62951317bb2e
+
+	/// Logo churn: churned / (active + churned).
+	measure 'Churn Rate' = DIVIDE ( [Churned Customers], [Active Customers] + [Churned Customers] )
+		formatString: "0.0%"
+		displayFolder: 6 Customers
+		lineageTag: 10f8c11d-233a-5ce9-bdbe-d9dbf4168721
+
+	/// Annual run-rate = end-of-period MRR x 12.
+	measure 'ARR Run-rate' = [MRR (end of period)] * 12
+		formatString: "€ #,0"
+		displayFolder: 9 Report helpers
+		lineageTag: 8067565d-5d50-5e9f-b34a-c086cd2fbfd5
+
+	column customer_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: customer_id
+		lineageTag: 6b6a6892-c304-5f7d-8dd4-1e02b576e2a8
+
+	column year_month
+		dataType: string
+		summarizeBy: none
+		sourceColumn: year_month
+		lineageTag: aead1921-a227-5bab-9a05-0c7119c7278c
+
+	column month_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: month_key
+		lineageTag: 824bca2a-b9db-5f34-ab03-21b96f7fedb2
+
+	column mrr_amount
+		dataType: double
+		isHidden
+		summarizeBy: sum
+		sourceColumn: mrr
+		lineageTag: de49b79e-e9f2-5155-8085-46cbd4970c9d
+
+	column is_active
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_active
+		lineageTag: 22174947-a820-57e4-b38a-a052a1c5c005
+
+	column is_churned
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_churned
+		lineageTag: e3687052-159c-551b-90dd-69a3838f5406
+
+	partition FactCustomerMonthly = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactCustomerMonthly.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"customer_id", Int64.Type}, {"year_month", type text}, {"month_key", Int64.Type}, {"mrr", type number}, {"is_active", Int64.Type}, {"is_churned", Int64.Type}}, "en-US")
+				in
+				    Typed

@@ -1,0 +1,22 @@
+campaign_id,campaign_name,channel_name,objective,sessions,spend,leads,mqls,sqls,opportunities,customers,won_revenue,avg_lead_score,lead_to_sql_rate,lead_to_customer_rate,cpl,cac,revenue_to_spend,recommendation,revenue_rank
+20,Customer Referral,Referral,Partnership,2881,0.0,211,171,131,109,47,102817.08,75.3,0.6209,0.2227,,,,NON-PAID,1
+10,SEO Product Pages,Organic Search,Organic,29665,0.0,493,274,148,121,25,96611.47,57.5,0.3002,0.0507,,,,NON-PAID,2
+19,Partner Network,Referral,Partnership,3990,3505.93,264,197,158,136,45,77758.27,73.5,0.5985,0.1705,13.28,77.91,22.18,NON-PAID,3
+16,Newsletter,Email,Nurture,7382,1573.0,386,241,135,112,29,75606.75,61.0,0.3497,0.0751,4.08,54.24,48.07,NON-PAID,4
+17,Lead Nurture,Email,Nurture,4956,1378.0,282,194,140,118,37,74269.75,67.2,0.4965,0.1312,4.89,37.24,53.9,NON-PAID,5
+21,Industry Events,Referral,Events,1333,12429.23,91,69,56,40,15,56354.39,72.3,0.6154,0.1648,136.58,828.62,4.53,NON-PAID,6
+14,Returning Visitors,Direct,Direct,11280,0.0,247,155,96,81,32,56075.87,62.3,0.3887,0.1296,,,,NON-PAID,7
+5,Operations Leaders,LinkedIn Ads,Lead gen,1025,7676.47,41,31,26,19,8,43314.78,73.2,0.6341,0.1951,187.23,959.56,5.64,SCALE,8
+13,Brand Direct,Direct,Direct,23340,0.0,477,271,162,131,28,35409.39,59.5,0.3396,0.0587,,,,NON-PAID,9
+12,SEO Comparison,Organic Search,Organic,7402,0.0,117,74,45,36,10,32297.86,65.1,0.3846,0.0855,,,,NON-PAID,10
+4,Decision Makers,LinkedIn Ads,Lead gen,1606,13533.68,68,48,43,36,12,24636.85,75.3,0.6324,0.1765,199.02,1127.81,1.82,SCALE,11
+1,High Intent Search,Google Ads,Conversion,8214,21151.04,273,150,80,62,17,23967.68,55.8,0.293,0.0623,77.48,1244.18,1.13,MAINTAIN,12
+3,Restaurant Operations,Google Ads,Conversion,3985,9387.44,142,70,24,23,6,22297.13,53.4,0.169,0.0423,66.11,1564.57,2.38,MAINTAIN,13
+11,SEO Guides,Organic Search,Organic,27252,0.0,465,207,88,69,18,12577.64,50.1,0.1892,0.0387,,,,NON-PAID,14
+18,Reactivation,Email,Nurture,2372,975.0,137,66,27,25,6,5838.56,54.1,0.1971,0.0438,7.12,162.5,5.99,NON-PAID,15
+7,Awareness Video,Meta Ads,Awareness,20727,13645.48,931,142,24,20,3,3187.2,27.5,0.0258,0.0032,14.66,4548.49,0.23,REDUCE,16
+15,Demo Page Direct,Direct,Direct,5441,0.0,99,70,40,31,5,2640.27,65.6,0.404,0.0505,,,,NON-PAID,17
+2,Competitor Search,Google Ads,Conversion,3292,11056.87,120,52,15,11,3,2315.86,47.1,0.125,0.025,92.14,3685.62,0.21,REDUCE,18
+9,Retargeting,Meta Ads,Conversion,3613,3615.37,160,59,18,12,2,1853.6,43.7,0.1125,0.0125,22.6,1807.68,0.51,OPTIMISE,19
+8,Lead Magnet,Meta Ads,Lead gen,8989,7477.86,413,107,24,19,2,1200.54,35.0,0.0581,0.0048,18.11,3738.93,0.16,REDUCE,20
+6,SMB Growth,LinkedIn Ads,Lead gen,811,5445.51,31,19,11,9,0,0.0,59.3,0.3548,0.0,175.66,,0.0,REDUCE,21

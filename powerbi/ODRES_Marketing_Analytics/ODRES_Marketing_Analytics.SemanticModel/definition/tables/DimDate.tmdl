@@ -1,0 +1,78 @@
+table DimDate
+	lineageTag: 959a29a2-1423-5b5a-8bd9-b52e49ad7dda
+	dataCategory: Time
+
+	column date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: date_key
+		lineageTag: ac750eb7-60d8-556d-b340-17c190591f3b
+
+	column date
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		isKey
+		summarizeBy: none
+		sourceColumn: date
+		lineageTag: a2242701-ae39-557c-ab0c-e0fa3c2bb197
+
+	column year
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: year
+		lineageTag: 00425924-075c-5ad4-b4db-47080639f25e
+
+	column quarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: quarter
+		lineageTag: 25ccad77-8f29-5dfd-bf12-7ef1040d764d
+
+	column month
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: month
+		lineageTag: 11302945-aac8-5933-9033-d3acb69ea57c
+
+	column month_name
+		dataType: string
+		summarizeBy: none
+		sortByColumn: month
+		sourceColumn: month_name
+		lineageTag: e4babf00-23cb-5ef0-96c9-3e779b027f2b
+
+	column year_month
+		dataType: string
+		summarizeBy: none
+		sourceColumn: year_month
+		lineageTag: fe76e0ec-7e03-55b0-b3e1-9d0f3671737c
+
+	column week
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: week
+		lineageTag: b7c9b68a-852e-5590-85ea-f8c3dcd999df
+
+	column day_of_week
+		dataType: string
+		summarizeBy: none
+		sourceColumn: day_of_week
+		lineageTag: 30e2d989-9c4c-5439-915c-c5baf8db5f27
+
+	column is_weekend
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_weekend
+		lineageTag: 1ccd4093-f20e-50a3-8b70-81e8a6292a0d
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimDate.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"date_key", Int64.Type}, {"date", type date}, {"year", Int64.Type}, {"quarter", type text}, {"month", Int64.Type}, {"month_name", type text}, {"year_month", type text}, {"week", Int64.Type}, {"day_of_week", type text}, {"is_weekend", Int64.Type}}, "en-US")
+				in
+				    Typed

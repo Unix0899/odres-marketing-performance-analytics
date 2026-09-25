@@ -1,0 +1,201 @@
+lead_id,created_at,channel,campaign,region,company_size,business_type,lead_score,is_mql,is_sql
+1.0,2025-11-01 18:37,Google Ads,High Intent Search,LIEGE,1-9,Restaurant,54.0,1,1
+2.0,2025-11-01 10:48,LinkedIn Ads,Decision Makers,Walloon Brabant,10-49,Café,71.0,1,1
+3.0,2025-11-01 17:44,Meta Ads,Awareness Video,Brussels,10-49,Restaurant,6.0,0,0
+4.0,2025-11-01 19:43,Meta Ads,Awareness Video,Flemish Brabant,1-9,Restaurant,44.0,0,0
+5.0,2025-11-01 15:04,Meta Ads,Lead Magnet,Brussels,1-9,Snack,53.0,1,1
+6.0,2025-11-01 09:19,Meta Ads,Lead Magnet,Walloon Brabant,1-9,Restaurant,23.0,0,0
+7.0,2025-11-01 17:53,Organic Search,SEO Product Pages,Brussels,1-9,Bar,47.0,1,1
+8.0,2025-11-01 08:15,Organic Search,SEO Guides,Antwerp,1-9,Restaurant,50.0,0,1
+9.0,2025-11-01 11:21,Direct,Returning Visitors,Walloon Brabant,10-49,Restaurant,76.0,1,1
+10.0,2025-11-01 16:45,Referral,Partner Network,East Flanders,1-9,Bar,74.0,1,0
+11.0,2025-11-01 16:58,Referral,Customer Referral,Flemish Brabant,10-49,Snack,89.0,1,1
+12.0,2025-11-02 20:48,Google Ads,High Intent Search,Brussels,1-9,Bar,60.0,0,0
+13.0,2025-11-02 11:27,Meta Ads,Awareness Video,Antwerp,1-9,Restaurant,18.0,0,0
+14.0,2025-11-02 14:53,Meta Ads,Awareness Video,East Flanders,1-9,Restaurant,42.0,0,0
+15.0,2025-11-02 17:06,Meta Ads,Lead Magnet,Flemish Brabant,1-9,Restaurant,29.0,0,0
+16.0,2025-11-02 09:46,Organic Search,SEO Product Pages,Hainaut,10-49,Snack,76.0,1,1
+17.0,2025-11-02 15:27,Organic Search,SEO Product Pages,East Flanders,1-9,Hotel,54.0,1,1
+18.0,2025-11-02 14:43,Direct,Brand Direct,Flemish Brabant,1-9,Restaurant,46.0,0,0
+19.0,2025-11-02 14:00,Direct,Brand Direct,Walloon Brabant,1-9,Restaurant,43.0,0,0
+20.0,2025-11-02 08:43,Email,Newsletter,Flemish Brabant,1-9,Café,50.0,0,0
+21.0,2025-11-02 13:23,Email,Newsletter,Brussels,1-9,Snack,69.0,1,0
+22.0,2025-11-03 17:12,Google Ads,High Intent Search,Flemish Brabant,10-49,Snack,39.0,1,1
+23.0,2025-11-03 08:46,Google Ads,High Intent Search,Hainaut,1-9,Restaurant,65.0,0,0
+24.0,2025-11-03 14:32,LinkedIn Ads,Decision Makers,Antwerp,10-49,Snack,72.0,1,0
+25.0,2025-11-03 13:58,Meta Ads,Awareness Video,East Flanders,1-9,Restaurant,21.0,0,0
+26.0,2025-11-03 12:35,Meta Ads,Awareness Video,Hainaut,10-49,Snack,48.0,0,0
+27.0,2025-11-03 19:59,Meta Ads,Awareness Video,Brussels,10-49,Restaurant,16.0,0,0
+28.0,2025-11-03 12:10,Meta Ads,Awareness Video,Flemish Brabant,10-49,Restaurant,22.0,0,0
+29.0,2025-11-03 10:27,Meta Ads,Awareness Video,Walloon Brabant,10-49,Restaurant,51.0,0,0
+30.0,2025-11-03 11:57,Meta Ads,Awareness Video,Walloon Brabant,1-9,Café,25.0,0,0
+31.0,2025-11-03 20:51,Meta Ads,Awareness Video,Hainaut,1-9,Restaurant,22.0,0,0
+32.0,2025-11-03 08:48,Meta Ads,Awareness Video,Brussels,1-9,Restaurant,37.0,0,0
+33.0,2025-11-03 07:38,Meta Ads,Lead Magnet,Antwerp,10-49,Restaurant,44.0,0,0
+34.0,2025-11-03 08:57,Organic Search,SEO Product Pages,Brussels,10-49,Restaurant,54.0,0,0
+35.0,2025-11-03 09:30,Organic Search,SEO Product Pages,Antwerp,1-9,Restaurant,68.0,1,1
+36.0,2025-11-03 14:57,Organic Search,SEO Guides,Brussels,1-9,Café,63.0,1,1
+37.0,2025-11-03 21:56,Organic Search,SEO Guides,Liège,10-49,Snack,62.0,0,0
+38.0,2025-11-03 14:24,Direct,Brand Direct,East Flanders,1-9,Restaurant,72.0,1,1
+39.0,2025-11-04 10:38,LinkedIn Ads,Decision Makers,Namur,10-49,Bar,62.0,1,1
+40.0,2025-11-04 08:44,Meta Ads,Awareness Video,Brussels,10-49,Café,40.0,1,0
+41.0,2025-11-04 07:04,Meta Ads,Awareness Video,Namur,1-9,Snack,11.0,0,0
+42.0,2025-11-04 07:15,Meta Ads,Awareness Video,Hainaut,1-9,Bar,0.0,0,0
+43.0,2025-11-04 17:06,Organic Search,SEO Product Pages,Liège,1-9,Restaurant,40.0,1,0
+44.0,2025-11-04 21:48,Organic Search,SEO Product Pages,Hainaut,1-9,Hotel,76.0,0,0
+45.0,2025-11-04 14:31,Organic Search,SEO Product Pages,Walloon Brabant,10-49,Restaurant,77.0,1,0
+46.0,2025-11-04 08:13,Organic Search,SEO Product Pages,Brussels,1-9,Restaurant,66.0,1,0
+47.0,2025-11-04 07:25,Organic Search,SEO Product Pages,Brussels,1-9,Bar,57.0,0,0
+48.0,2025-11-04 16:38,Organic Search,SEO Product Pages,Liège,10-49,Snack,49.0,1,0
+49.0,2025-11-04 17:51,Direct,Brand Direct,Anvers,10-49,Restaurant,82.0,0,0
+50.0,2025-11-04 12:10,Direct,Brand Direct,Antwerp,1-9,Restaurant,55.0,1,0
+51.0,2025-11-04 09:25,Email,Newsletter,Namur,1-9,Restaurant,44.0,0,0
+52.0,2025-11-04 09:42,Email,Newsletter,Antwerp,10-49,Restaurant,63.0,1,0
+53.0,2025-11-04 09:01,Email,Newsletter,Flemish Brabant,10-49,Restaurant,78.0,0,0
+54.0,2025-11-04 12:31,Email,Newsletter,Walloon Brabant,50+,Bar,45.0,0,0
+55.0,2025-11-04 11:50,Email,Newsletter,Brussels,1-9,Restaurant,55.0,1,1
+56.0,2025-11-04 10:40,Referral,Partner Network,Flemish Brabant,1-9,Snack,80.0,0,0
+57.0,2025-11-04 17:59,Referral,Customer Referral,Brussels,10-49,Restaurant,62.0,1,1
+58.0,2025-11-05 13:46,Google Ads,High Intent Search,East Flanders,1-9,Bar,60.0,0,0
+59.0,2025-11-05 21:02,Meta Ads,Awareness Video,Antwerp,1-9,Café,22.0,0,0
+60.0,2025-11-05 15:55,Meta Ads,Awareness Video,Walloon Brabant,1-9,Restaurant,22.0,0,0
+61.0,2025-11-05 09:14,Meta Ads,Lead Magnet,East Flanders,10-49,Café,36.0,1,1
+62.0,2025-11-05 13:47,Organic Search,SEO Product Pages,Namur,10-49,Café,64.0,1,0
+63.0,2025-11-05 13:48,Organic Search,SEO Product Pages,East Flanders,1-9,Bar,61.0,1,0
+64.0,2025-11-05 19:54,Organic Search,SEO Product Pages,East Flanders,50+,Restaurant,78.0,1,1
+65.0,2025-11-05 07:01,Organic Search,SEO Product Pages,Walloon Brabant,1-9,Restaurant,58.0,0,0
+66.0,2025-11-05 17:36,Organic Search,SEO Product Pages,Hainaut,1-9,Café,58.0,1,1
+67.0,2025-11-05 12:19,Organic Search,SEO Guides,Walloon Brabant,10 - 49,Bar,45.0,1,1
+68.0,2025-11-05 16:45,Organic Search,SEO Guides,Brussels,1-9,Restaurant,53.0,0,0
+69.0,2025-11-05 10:13,Organic Search,SEO Guides,East Flanders,1-9,Snack,57.0,1,0
+70.0,2025-11-05 19:05,Organic Search,SEO Guides,Antwerp,10-49,Restaurant,63.0,1,1
+71.0,2025-11-05 21:09,Organic Search,SEO Guides,Brussels,1-9,Restaurant,32.0,0,0
+72.0,2025-11-05 16:22,Direct,Brand Direct,Hainaut,1-9,Bar,66.0,0,0
+73.0,2025-11-05 08:36,Direct,Returning Visitors,Walloon Brabant,10-49,Bar,69.0,0,0
+74.0,2025-11-05 18:00,Direct,Returning Visitors,Hainaut,50+,Restaurant,90.0,1,0
+75.0,2025-11-05 19:23,Email,Newsletter,Flemish Brabant,10-49,Snack,49.0,0,0
+76.0,2025-11-05 08:08,Referral,Partner Network,Brussels,1-9,Bar,56.0,1,1
+77.0,2025-11-06 21:05,Google Ads,Competitor Search,Brussels,10-49,Bar,43.0,1,0
+78.0,2025-11-06 07:59,LinkedIn Ads,Decision Makers,Brussels,1-9,Restaurant,81.0,1,0
+79.0,2025-11-06 19:44,Meta Ads,Awareness Video,Brussels,1-9,Snack,8.0,0,0
+80.0,2025-11-06 20:15,Meta Ads,Awareness Video,Antwerp,1-9,Café,13.0,0,0
+81.0,2025-11-06 13:44,Meta Ads,Awareness Video,Flemish Brabant,1-9,Restaurant,12.0,0,0
+82.0,2025-11-06 09:50,Meta Ads,Awareness Video,Liège,1-9,Restaurant,34.0,0,0
+83.0,2025-11-06 10:43,Meta Ads,Lead Magnet,Liège,1-9,Bar,32.0,0,0
+84.0,2025-11-06 21:35,Meta Ads,Lead Magnet,Liège,1-9,Restaurant,33.0,0,0
+85.0,2025-11-06 21:56,Meta Ads,Lead Magnet,Liège,1-9,Snack,18.0,0,0
+86.0,2025-11-06 21:06,Organic Search,SEO Product Pages,Flemish Brabant,1-9,Restaurant,58.0,1,0
+87.0,2025-11-06 14:35,Organic Search,SEO Guides,Walloon Brabant,1-9,Restaurant,45.0,0,0
+88.0,2025-11-06 12:53,Organic Search,SEO Guides,Namur,1-9,Snack,34.0,1,0
+89.0,2025-11-06 08:15,Organic Search,SEO Guides,Namur,10-49,Café,,0,0
+90.0,2025-11-06 09:54,Direct,Brand Direct,East Flanders,10-49,Restaurant,77.0,1,1
+91.0,2025-11-06 09:55,Direct,Brand Direct,Antwerp,1-9,Bar,63.0,1,1
+92.0,2025-11-06 08:31,Direct,Brand Direct,Antwerp,1-9,Restaurant,60.0,1,1
+93.0,2025-11-06 10:24,Direct,Returning Visitors,Brussels,1-9,Restaurant,48.0,0,0
+94.0,2025-11-07 13:08,Google Ads,High Intent Search,Liège,1-9,Restaurant,37.0,0,0
+95.0,2025-11-07 18:29,Meta Ads,Awareness Video,Hainaut,50+,Restaurant,30.0,0,0
+96.0,2025-11-07 21:41,Meta Ads,Awareness Video,Walloon Brabant,50+,Restaurant,44.0,1,0
+97.0,2025-11-07 10:18,Meta Ads,Awareness Video,Liège,1-9,Snack,20.0,0,0
+98.0,2025-11-07 07:22,Meta Ads,Awareness Video,Antwerp,1-9,Café,24.0,0,0
+99.0,2025-11-07 20:07,Meta Ads,Awareness Video,Hainaut,1-9,Restaurant,22.0,0,0
+100.0,2025-11-07 20:40,Meta Ads,Awareness Video,Namur,1-9,Snack,0.0,0,0
+101.0,2025-11-07 13:27,Meta Ads,Lead Magnet,East Flanders,1-9,Restaurant,32.0,0,0
+102.0,2025-11-07 17:26,Organic Search,SEO Product Pages,Walloon Brabant,1-9,Bar,60.0,1,1
+103.0,2025-11-07 18:37,Direct,Brand Direct,Brussels,10-49,Restaurant,71.0,1,1
+104.0,2025-11-07 21:21,Email,Newsletter,Walloon Brabant,1-9,Snack,61.0,1,0
+105.0,2025-11-07 10:56,Email,Newsletter,Walloon Brabant,50+,Café,47.0,1,1
+106.0,2025-11-07 15:42,Referral,Customer Referral,namur ,1-9,Café,84.0,1,1
+107.0,2025-11-08 10:37,Meta Ads,Awareness Video,Brussels,10-49,Restaurant,23.0,0,0
+108.0,2025-11-08 09:22,Meta Ads,Awareness Video,Liège,10-49,Bar,55.0,1,1
+109.0,2025-11-08 17:32,Meta Ads,Awareness Video,East Flanders,10-49,Snack,36.0,1,0
+110.0,2025-11-08 20:15,Meta Ads,Lead Magnet,East Flanders,1-9,Bar,25.0,0,0
+111.0,2025-11-08 15:43,Organic Search,SEO Guides,Antwerp,1-9,Restaurant,17.0,0,0
+112.0,2025-11-08 16:51,Organic Search,SEO Guides,Brussels,10-49,Bar,21.0,0,0
+113.0,2025-11-08 21:51,Email,Newsletter,Walloon Brabant,1 - 9,Restaurant,69.0,1,1
+114.0,2025-11-08 18:24,Referral,Partner Network,Hainaut,1-9,Restaurant,58.0,0,0
+115.0,2025-11-09 14:24,Google Ads,High Intent Search,Walloon Brabant,1-9,Snack,40.0,0,0
+116.0,2025-11-09 13:17,Meta Ads,Awareness Video,Hainaut,1-9,Restaurant,20.0,0,0
+117.0,2025-11-09 07:18,Meta Ads,Awareness Video,Antwerp,1-9,Restaurant,12.0,0,0
+118.0,2025-11-09 13:38,Meta Ads,Summer Promo TEST,East Flanders,1-9,Bar,36.0,1,0
+119.0,2025-11-09 09:14,Meta Ads,Awareness Video,Flemish Brabant,1-9,Restaurant,17.0,0,0
+120.0,2025-11-09 14:57,Meta Ads,Awareness Video,Brussels,1-9,Snack,30.0,0,0
+121.0,2025-11-09 15:34,Meta Ads,Awareness Video,East Flanders,1-9,Restaurant,23.0,0,0
+122.0,2025-11-09 12:44,Meta Ads,Lead Magnet,Walloon Brabant,1-9,Restaurant,35.0,0,0
+123.0,2025-11-09 20:04,Meta Ads,Summer Promo TEST,Antwerp,1-9,Bar,14.0,0,0
+124.0,2025-11-09 08:04,Organic Search,SEO Product Pages,Namur,1-9,Bar,66.0,0,1
+125.0,2025-11-09 17:19,Organic Search,SEO Guides,East Flanders,50+,Café,52.0,1,0
+126.0,2025-11-09 13:00,Organic Search,SEO Guides,Brussels,1-9,Snack,31.0,0,0
+127.0,2025-11-09 16:57,Direct,Brand Direct,Namur,1-9,Restaurant,32.0,0,0
+128.0,2025-11-09 09:05,Direct,Returning Visitors,Brussels,1-9,Café,77.0,1,0
+129.0,2025-11-09 13:24,Email,Newsletter,Brussels,10-49,Restaurant,53.0,1,0
+130.0,2025-11-09 09:10,Email,Newsletter,East Flanders,10-49,Restaurant,70.0,0,0
+131.0,2025-11-09 14:51,Email,Newsletter,Flemish Brabant,10-49,Restaurant,56.0,0,0
+132.0,2025-11-09 10:17,Email,Newsletter,Walloon Brabant,1-9,Restaurant,46.0,0,0
+133.0,2025-11-09 21:29,Referral,Partner Network,Antwerp,10-49,Café,72.0,1,1
+134.0,2025-11-09 13:06,Referral,Partner Network,Liège,1-9,Restaurant,45.0,0,0
+135.0,2025-11-09 08:16,Referral,Customer Referral,Hainaut,10-49,Restaurant,83.0,1,1
+136.0,2025-11-10 13:50,Google Ads,Competitor Search,East Flanders,1-9,Restaurant,46.0,0,0
+137.0,2025-11-10 17:35,Google Ads,Competitor Search,Walloon Brabant,1-9,Restaurant,28.0,0,0
+138.0,2025-11-10 10:18,Google Ads,Competitor Search,Hainaut,1-9,Café,51.0,0,0
+139.0,2025-11-10 16:16,Meta Ads,Awareness Video,Antwerp,10-49,Snack,64.0,0,0
+140.0,2025-11-10 13:30,Meta Ads,Awareness Video,Flemish Brabant,50+,Snack,28.0,1,0
+141.0,2025-11-10 20:41,Meta Ads,Awareness Video,Liège,10-49,Restaurant,42.0,0,0
+142.0,2025-11-10 08:10,Meta Ads,Awareness Video,Brussels,10-49,Bar,47.0,0,0
+143.0,2025-11-10 18:44,Meta Ads,Awareness Video,Antwerp,10-49,Restaurant,41.0,0,0
+144.0,2025-11-10 11:55,Meta Ads,Lead Magnet,Walloon Brabant,10-49,Bar,46.0,0,0
+145.0,2025-11-10 10:13,Meta Ads,Lead Magnet,Antwerp,1-9,Restaurant,40.0,1,0
+146.0,2025-11-10 19:33,Organic Search,SEO Product Pages,Antwerp,10-49,Restaurant,55.0,0,0
+147.0,2025-11-10 13:17,Organic Search,SEO Product Pages,Flemish Brabant,50+,Restaurant,74.0,1,0
+148.0,2025-11-10 10:55,Organic Search,SEO Product Pages,Antwerp,10-49,Hotel,,0,0
+149.0,2025-11-10 07:02,Organic Search,SEO Product Pages,Walloon Brabant,50+,Bar,72.0,1,0
+150.0,2025-11-10 15:32,Organic Search,SEO Guides,Antwerp,1-9,Snack,43.0,1,1
+151.0,2025-11-10 12:15,Organic Search,SEO Guides,Liège,1-9,Snack,33.0,1,0
+152.0,2025-11-10 16:17,Direct,Returning Visitors,Brussels,50+,Bar,72.0,1,0
+153.0,2025-11-10 08:32,Email,Newsletter,Hainaut,50+,Restaurant,57.0,1,0
+154.0,2025-11-10 11:07,Email,Newsletter,Hainaut,1-9,Hotel,66.0,1,0
+155.0,2025-11-10 18:38,Email,Newsletter,Brussels,1-9,Hotel,56.0,0,0
+156.0,2025-11-11 09:51,Meta Ads,Awareness Video,Liège,10-49,Café,18.0,0,0
+157.0,2025-11-11 21:35,Meta Ads,Awareness Video,Antwerp,1-9,Restaurant,12.0,0,0
+158.0,2025-11-11 18:26,Meta Ads,Awareness Video,Walloon Brabant,1-9,Restaurant,17.0,0,0
+159.0,2025-11-11 19:46,Organic Search,SEO Guides,Brussels,1-9,Restaurant,52.0,0,0
+160.0,2025-11-11 07:47,Organic Search,SEO Guides,Brussels,1-9,Snack,60.0,1,0
+161.0,2025-11-11 08:47,Direct,Brand Direct,Brussels,1-9,Restaurant,68.0,1,1
+162.0,2025-11-11 11:21,Email,Newsletter,Liège,1-9,Restaurant,44.0,1,0
+163.0,2025-11-11 10:13,Email,Newsletter,Liège,1-9,Restaurant,68.0,1,1
+164.0,2025-11-11 19:56,Email,Newsletter,Flemish Brabant,1-9,Bar,35.0,0,0
+165.0,2025-11-11 11:11,Email,Newsletter,Namur,10-49,Bar,66.0,1,1
+166.0,2025-11-11 09:43,Referral,Partner Network,Flemish Brabant,10-49,Bar,88.0,1,1
+167.0,2025-11-11 12:46,Referral,Partner Network,Hainaut,1-9,Bar,86.0,1,1
+168.0,2025-11-11 07:54,Referral,Customer Referral,Antwerp,1-9,Restaurant,71.0,1,0
+169.0,2025-11-12 11:27,Meta Ads,Awareness Video,Namur,1-9,Bar,29.0,0,0
+170.0,2025-11-12 10:39,Meta Ads,Awareness Video,Antwerp,10-49,Restaurant,11.0,0,0
+171.0,2025-11-12 16:04,Meta Ads,Awareness Video,Liège,1-9,Snack,30.0,0,0
+172.0,2025-11-12 09:15,Meta Ads,Lead Magnet,Liège,50+,Restaurant,63.0,1,0
+173.0,2025-11-12 17:07,Meta Ads,Lead Magnet,Namur,10-49,Bar,33.0,0,0
+174.0,2025-11-12 16:02,Meta Ads,Summer Promo TEST,Antwerp,1-9,Hotel,48.0,0,0
+175.0,2025-11-12 07:12,Organic Search,SEO Product Pages,Antwerp,10-49,Bar,60.0,1,1
+176.0,2025-11-12 16:34,Organic Search,SEO Product Pages,Flemish Brabant,10-49,Hotel,49.0,1,0
+177.0,2025-11-12 09:45,Organic Search,SEO Product Pages,Liège,1-9,Restaurant,58.0,1,0
+178.0,2025-11-12 11:03,Organic Search,SEO Guides,Flemish Brabant,1-9,Restaurant,,0,0
+179.0,2025-11-12 21:14,Organic Search,SEO Guides,East Flanders,1-9,Bar,81.0,1,1
+180.0,2025-11-12 20:23,Organic Search,SEO Guides,East Flanders,1-9,Café,40.0,0,0
+181.0,2025-11-12 11:13,Direct,Brand Direct,Antwerp,50+,Restaurant,70.0,1,0
+182.0,2025-11-12 12:05,Direct,Brand Direct,Brussels,10-49,Café,73.0,1,1
+183.0,2025-11-12 17:48,Direct,Brand Direct,Antwerp,1-9,Restaurant,62.0,1,1
+184.0,2025-11-12 20:42,Referral,Partner Network,Hainaut,1-9,Café,72.0,0,0
+185.0,2025-11-12 17:14,Referral,Partner Network,East Flanders,10-49,Snack,63.0,1,0
+186.0,2025-11-12 08:28,Referral,Partner Network,East Flanders,1-9,Bar,74.0,1,1
+187.0,2025-11-12 13:10,Referral,Customer Referral,Walloon Brabant,1-9,Bar,99.0,1,0
+188.0,2025-11-12 09:35,Referral,Customer Referral,Antwerp,1-9,Hotel,55.0,1,1
+189.0,2025-11-12 09:24,Referral,Customer Referral,Flemish Brabant,1-9,Restaurant,55.0,1,0
+190.0,2025-11-13 14:37,Google Ads,Competitor Search,Hainaut,10-49,Restaurant,76.0,1,1
+191.0,2025-11-13 19:11,LinkedIn Ads,Decision Makers,Brussels,10-49,Restaurant,100.0,1,0
+192.0,2025-11-13 15:47,LinkedIn Ads,Decision Makers,Brussels,50+,Restaurant,100.0,1,1
+193.0,2025-11-13 12:45,Meta Ads,Awareness Video,Flemish Brabant,1-9,Restaurant,23.0,0,0
+194.0,2025-11-13 21:23,Meta Ads,Awareness Video,Antwerp,1-9,Restaurant,36.0,1,0
+195.0,2025-11-13 10:58,Meta Ads,Lead Magnet,East Flanders,10-49,Restaurant,27.0,0,0
+196.0,2025-11-13 08:30,Meta Ads,Summer Promo TEST,LIEGE,10-49,Snack,36.0,1,0
+197.0,2025-11-13 15:49,Organic Search,SEO Product Pages,Walloon Brabant,1-9,Snack,67.0,1,1
+198.0,2025-11-13 12:34,Organic Search,SEO Product Pages,Namur,10-49,Bar,37.0,0,0
+199.0,2025-11-13 13:06,Organic Search,SEO Guides,Brussels,1-9,Snack,42.0,0,0
+200.0,2025-11-13 07:19,Direct,Brand Direct,East Flanders,10-49,Restaurant,66.0,1,1

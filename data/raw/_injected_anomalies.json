@@ -1,0 +1,22 @@
+{
+  "marketing_duplicate_rows": 12,
+  "marketing_channel_casing_variants": 80,
+  "marketing_invalid_dates": 3,
+  "marketing_negative_spend": 2,
+  "marketing_spend_outlier_x100": 1,
+  "marketing_clicks_above_impressions": 2,
+  "lead_duplicate_rows": 45,
+  "lead_missing_score": 60,
+  "lead_score_out_of_range": 8,
+  "lead_sql_without_mql": 25,
+  "lead_unknown_campaign": 30,
+  "lead_region_label_variants": 70,
+  "lead_company_size_format_variants": 40,
+  "lead_missing_id": 3,
+  "opportunity_stage_casing": 35,
+  "opportunity_won_without_value": 6,
+  "opportunity_closed_before_created": 4,
+  "opportunity_orphan_lead": 5,
+  "opportunity_duplicate_rows": 8,
+  "customer_duplicate_rows": 3
+}

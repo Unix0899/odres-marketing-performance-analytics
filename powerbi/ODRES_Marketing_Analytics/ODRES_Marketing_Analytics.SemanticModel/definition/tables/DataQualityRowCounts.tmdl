@@ -1,0 +1,47 @@
+table DataQualityRowCounts
+	lineageTag: a6df6ede-dc64-5d5b-888a-13d209ed30e0
+
+	measure 'Rows Loaded' = SUM ( DataQualityRowCounts[clean_rows] )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: 604c63b7-dc62-53d2-9e0c-1a69ea173bc1
+
+	measure 'Rows Removed' = SUM ( DataQualityRowCounts[removed] )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: fec07270-f438-5265-8a7d-8f290f82e025
+
+	column table
+		dataType: string
+		summarizeBy: none
+		sourceColumn: table
+		lineageTag: 6e51a8cf-aba1-53b3-93e5-52c40c35611a
+
+	column raw_rows
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: raw_rows
+		lineageTag: 0b7560f2-5d10-51fd-afda-57302356b85d
+
+	column clean_rows
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: clean_rows
+		lineageTag: d93aa0e0-ab87-5eea-8106-d28a31414bcc
+
+	column removed
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: removed
+		lineageTag: 638d83d3-5270-5913-8b9d-175e60678c0a
+
+	partition DataQualityRowCounts = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DataQualityRowCounts.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"table", type text}, {"raw_rows", Int64.Type}, {"clean_rows", Int64.Type}, {"removed", Int64.Type}}, "en-US")
+				in
+				    Typed

@@ -1,0 +1,32 @@
+{
+  "name": "ODRES Portfolio (navy / teal)",
+  "dataColors": ["#0F8B8D", "#0D2A45", "#65B8B5", "#C9D3DC", "#C7851A", "#B5473A", "#607086", "#9FB0BF"],
+  "background": "#FFFFFF",
+  "foreground": "#102033",
+  "tableAccent": "#0F8B8D",
+  "good": "#0F8B8D",
+  "neutral": "#C7851A",
+  "bad": "#B5473A",
+  "maximum": "#0F8B8D",
+  "center": "#65B8B5",
+  "minimum": "#FFFFFF",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#102033" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 9, "color": "#607086" },
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 24, "color": "#0D2A45" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 11, "color": "#102033" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#DCE4EA" } }, "radius": 8 }],
+        "dropShadow": [{ "show": false }],
+        "title": [{ "show": true, "alignment": "left", "fontSize": 12 }]
+      }
+    },
+    "page": {
+      "*": { "background": [{ "color": { "solid": { "color": "#F6F8FA" } }, "transparency": 0 }] }
+    }
+  }
+}

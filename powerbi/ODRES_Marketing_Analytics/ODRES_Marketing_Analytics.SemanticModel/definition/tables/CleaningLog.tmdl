@@ -1,0 +1,37 @@
+table CleaningLog
+	lineageTag: b34d17c7-ee9f-54e6-8c7a-dd7979981d22
+
+	column rule
+		dataType: string
+		summarizeBy: none
+		sourceColumn: rule
+		lineageTag: 2aee3570-93bf-54c0-ae07-56c954a4cf66
+
+	column table
+		dataType: string
+		summarizeBy: none
+		sourceColumn: table
+		lineageTag: 548539a5-3562-58e7-a9e0-0c387a3ed64b
+
+	column rows_affected
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: rows_affected
+		lineageTag: cea31aad-b995-57c9-8d14-3c6fb6234f82
+
+	column action
+		dataType: string
+		summarizeBy: none
+		sourceColumn: action
+		lineageTag: c90058be-d76d-566a-8805-16fa14c899da
+
+	partition CleaningLog = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "CleaningLog.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"rule", type text}, {"table", type text}, {"rows_affected", Int64.Type}, {"action", type text}}, "en-US")
+				in
+				    Typed

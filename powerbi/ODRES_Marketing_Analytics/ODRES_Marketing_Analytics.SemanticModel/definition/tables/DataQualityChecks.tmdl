@@ -1,0 +1,70 @@
+table DataQualityChecks
+	lineageTag: 7851e67c-4459-5fc1-8be1-ea848f550185
+
+	measure 'Issues Found (raw)' = SUM ( DataQualityChecks[raw] )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: 83f8a600-05a5-58f5-9bd4-04736bab6822
+
+	/// Must be 0.
+	measure 'Blocking Errors Left' = CALCULATE ( SUM ( DataQualityChecks[clean] ), DataQualityChecks[severity] = "BLOCKING" )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: c723ec87-8b8e-5463-8949-a1aa32a9316b
+
+	measure 'Documented Warnings' = CALCULATE ( SUM ( DataQualityChecks[clean] ), DataQualityChecks[severity] = "WARNING" )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: fbaa17c9-a7fb-50dc-b24d-9a12a745cc1c
+
+	measure 'Issues After Cleaning' = SUM ( DataQualityChecks[clean] )
+		formatString: "#,0"
+		displayFolder: 8 Data quality
+		lineageTag: 7eee55bb-4006-5c88-96f4-74cdf79984fc
+
+	column check_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: check_id
+		lineageTag: aec893fd-4509-5ebb-8696-48c6828dc166
+
+	column table
+		dataType: string
+		summarizeBy: none
+		sourceColumn: table
+		lineageTag: eda8a8c5-6469-578b-a14e-156d03a1539b
+
+	column description
+		dataType: string
+		summarizeBy: none
+		sourceColumn: description
+		lineageTag: 9d63ba21-de54-5cdc-800b-0e22d6f8e327
+
+	column severity
+		dataType: string
+		summarizeBy: none
+		sourceColumn: severity
+		lineageTag: 2c5ce73e-b34c-5c76-959a-fe39931ed31a
+
+	column raw
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: raw
+		lineageTag: 60963365-e70a-521a-a8c5-c8bf1e5d714a
+
+	column clean
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: clean
+		lineageTag: 3e1b8b80-7347-5011-8931-e28fdcc9438f
+
+	partition DataQualityChecks = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DataQualityChecks.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"check_id", type text}, {"table", type text}, {"description", type text}, {"severity", type text}, {"raw", Int64.Type}, {"clean", Int64.Type}}, "en-US")
+				in
+				    Typed

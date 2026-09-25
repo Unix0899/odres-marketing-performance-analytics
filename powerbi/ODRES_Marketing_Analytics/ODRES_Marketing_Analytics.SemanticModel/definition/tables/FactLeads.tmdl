@@ -1,0 +1,155 @@
+table FactLeads
+	lineageTag: 4b5f840d-9859-5def-95e2-545fda10124b
+
+	measure 'Leads' = COUNTROWS ( FactLeads )
+		formatString: "#,0"
+		displayFolder: 2 Funnel
+		lineageTag: 8ed2c3a8-5938-5b7c-b326-02f34e9cfdfb
+
+	/// Marketing-qualified leads.
+	measure 'MQLs' = CALCULATE ( [Leads], FactLeads[is_mql] = 1 )
+		formatString: "#,0"
+		displayFolder: 2 Funnel
+		lineageTag: 2e2bc5b8-eaca-5113-9a5d-8bb364128ec6
+
+	/// Sales-qualified leads (an SQL is always an MQL).
+	measure 'SQLs' = CALCULATE ( [Leads], FactLeads[is_sql] = 1 )
+		formatString: "#,0"
+		displayFolder: 2 Funnel
+		lineageTag: 02e9fece-e771-56f8-877c-8903be298920
+
+	/// Unknown scores (blank) are ignored.
+	measure 'Avg Lead Score' = AVERAGE ( FactLeads[lead_score] )
+		formatString: "0.0"
+		displayFolder: 2 Funnel
+		lineageTag: bf9ef806-dda7-50a3-8e7c-c8c604e2b1da
+
+	measure 'Session to Lead %' = DIVIDE ( [Leads], [Sessions] )
+		formatString: "0.0%"
+		displayFolder: 3 Conversion
+		lineageTag: e7aed37d-e099-5086-9c6b-064d47f1b1a3
+
+	measure 'Lead to MQL %' = DIVIDE ( [MQLs], [Leads] )
+		formatString: "0.0%"
+		displayFolder: 3 Conversion
+		lineageTag: 6f8359b9-670b-5a1f-ba2c-01b5d80d37d4
+
+	measure 'MQL to SQL %' = DIVIDE ( [SQLs], [MQLs] )
+		formatString: "0.0%"
+		displayFolder: 3 Conversion
+		lineageTag: 637c004d-1987-5886-9fdc-50c823d25d89
+
+	measure 'SQL to Customer %' = DIVIDE ( [Customers], [SQLs] )
+		formatString: "0.0%"
+		displayFolder: 3 Conversion
+		lineageTag: a22bd313-143b-5338-944c-ff9d6467f732
+
+	measure 'Lead to Customer %' = DIVIDE ( [Customers], [Leads] )
+		formatString: "0.00%"
+		displayFolder: 3 Conversion
+		lineageTag: ba4bf061-7b5f-5f05-8f6b-48c99f78e135
+
+	/// Month-over-month change. Use with DimDate[year_month] on the axis.
+	measure 'MoM Leads %' =
+			VAR CurrentLeads = [Leads]
+			VAR PreviousLeads = CALCULATE ( [Leads], DATEADD ( DimDate[date], -1, MONTH ) )
+			RETURN
+			    DIVIDE ( CurrentLeads - PreviousLeads, PreviousLeads )
+		formatString: "+0.0%;-0.0%;0.0%"
+		displayFolder: 7 Trend
+		lineageTag: 3fd84bc6-73dd-5d39-86ed-88c5fbb0c9cf
+
+	/// Share of all leads (by channel).
+	measure 'Share of Leads' = DIVIDE ( [Leads], CALCULATE ( [Leads], ALL ( DimChannel ) ) )
+		formatString: "0.0%"
+		displayFolder: 9 Report helpers
+		lineageTag: 4268f869-3a92-5cee-98fd-e2d91cfee8ec
+
+	column lead_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: lead_id
+		lineageTag: c40874d1-7a22-505f-b3c1-a184b904ae5a
+
+	column created_date_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: created_date_key
+		lineageTag: dafd23fb-22e4-5ba6-9d5f-0a63c7473f6e
+
+	column channel_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: channel_id
+		lineageTag: b1016b25-a7b2-55c8-b526-6b17f7b73e96
+
+	column campaign_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: campaign_id
+		lineageTag: 223ec2cd-d672-5e37-bd48-6077b784344f
+
+	column region_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_id
+		lineageTag: e1c32947-2dcf-586c-a87c-84d85b5f1649
+
+	column company_size
+		dataType: string
+		summarizeBy: none
+		sourceColumn: company_size
+		lineageTag: 116031d5-0777-5f9b-8d46-aaca2b259106
+
+	column business_type
+		dataType: string
+		summarizeBy: none
+		sourceColumn: business_type
+		lineageTag: 3912b814-42ed-579c-a124-9065779636be
+
+	column lead_score
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: lead_score
+		lineageTag: ab94d938-519c-5f30-9096-0e743b5554e0
+
+	column is_mql
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_mql
+		lineageTag: 2c45daff-7689-53b9-a40a-bd29d8122238
+
+	column is_sql
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: is_sql
+		lineageTag: 3ca6dbe9-17a4-5fd1-8f24-f5b635794504
+
+	column 'Score Band' =
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( FactLeads[lead_score] ), "Unknown",
+			    FactLeads[lead_score] >= 80, "80-100",
+			    FactLeads[lead_score] >= 60, "60-79",
+			    FactLeads[lead_score] >= 40, "40-59",
+			    "0-39"
+			)
+		dataType: string
+		summarizeBy: none
+		lineageTag: 2e2525d6-4978-5e7b-95da-a9237ffb961d
+
+	partition FactLeads = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactLeads.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    EmptyToNull = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted)),
+				    Typed = Table.TransformColumnTypes(EmptyToNull, {{"lead_id", Int64.Type}, {"created_date_key", Int64.Type}, {"channel_id", Int64.Type}, {"campaign_id", Int64.Type}, {"region_id", Int64.Type}, {"company_size", type text}, {"business_type", type text}, {"lead_score", Int64.Type}, {"is_mql", Int64.Type}, {"is_sql", Int64.Type}}, "en-US")
+				in
+				    Typed
